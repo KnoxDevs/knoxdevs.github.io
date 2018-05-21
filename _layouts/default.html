@@ -1,0 +1,122 @@
+---
+---
+
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+    <style>
+        .initial-content{
+            margin: 0 auto;
+            padding: 0 1em;
+        }
+        /* Grid stuff */
+        .cards {
+            display: grid;
+            /*padding: 1rem;*/
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 1rem;
+         }
+        /* Card Based Layout - Base styles */
+        .card {
+          background: white;
+          margin-bottom: 0em;	
+          border-radius: 0.25em;
+          /* box-shadow: 0px 1px 5px #555; */
+        }
+        .card__title{
+          border: 1px solid rgba(0,0,0,.125);
+          border-bottom: #fff;
+          padding: 0.5rem;
+        }
+        .card__title h3{
+          margin: 0em 0 0.5em;
+        }
+        .card__title h5{
+          margin: 0em 0 0.5em;
+        }
+        .card__description{
+          padding: .5rem;
+          line-height: 1.6rem;
+          font-size: 0.8rem;
+          border: 1px solid rgba(0,0,0,.125);
+          border-top: #fff;
+          border-bottom: #fff;
+        }
+
+        .card__image{
+          border: 1px solid rgba(0,0,0,.125);
+          border-top: #fff;
+          border-bottom: #fff;
+          margin: 0;
+        }
+        
+        .card a {
+            color: black;
+            text-decoration: none;
+        }
+        .card__image img{
+            display: block;
+            border: 0;
+            max-height: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+            height: auto;
+        }
+        
+        .card a:hover {
+            box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+        }
+        
+        .card__footer {
+          margin-top: auto;
+          background-color: rgba(0,0,0,.03);
+          padding: 1.4rem;
+          border: 1px solid rgba(0,0,0,.125);
+          border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+        }
+        .card__footer ul{
+          list-style-type: none;
+          padding: 0 0 0.5em 0;
+        }
+        .card__footer li{
+          float: left;
+          padding: 0 0 0 0.5em;
+        }
+    </style>
+  </head>
+
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <div class="initial-content">
+      {{ content }}
+    </div>
+
+    {% if site.search == true %}
+      <div class="search-content">
+        {% include search/search_form.html %}
+      </div>
+    {% endif %}
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>
