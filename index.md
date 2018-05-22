@@ -16,14 +16,14 @@ excerpt: KnoxDevs is a registered non-profit organization whose sole mission is 
 
 # Proudly Supported by:
 
-<img src="/assets/images/sponsors/premier_staffing.jpg" alt="Premier Staffing" style="width:20em" />
+<a href="http://www.premierstaffingpartners.com/" target="_blank"><img src="/assets/images/sponsors/premier_staffing.jpg" alt="Premier Staffing" style="width:20em" /></a>
 
 ## June Event support from:
 
 <div id="row">
-<img src="/assets/images/sponsors/avrio_analytics.jpg" alt="Avrio Analytics" style="width:15em" />
+<a href="http://avrioanalytics.com/" target="_blank"><img src="/assets/images/sponsors/avrio_analytics.jpg" alt="Avrio Analytics" style="width:15em" /></a>
 
-<img src="/assets/images/sponsors/cirrus_insight.png" alt="Cirrus Insight" style="width:15em" />
+<a href="https://www.cirrusinsight.com/" target="_blank"><img src="/assets/images/sponsors/cirrus_insight.png" alt="Cirrus Insight" style="width:15em" /></a>
 
 </div>
 <br/>
