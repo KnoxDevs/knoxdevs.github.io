@@ -1,0 +1,51 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: single
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: categories
+  label: Categories
+  type: tag_list
+  hidden: false
+  default: ''
+- name: author_profile
+  label: Author profile
+  type: boolean
+  hidden: false
+  default: true
+- name: read_time
+  label: Read time
+  type: boolean
+  hidden: false
+  default: true
+- name: comments
+  label: Comments
+  type: boolean
+  hidden: false
+  default: false
+- name: share
+  label: Share
+  type: boolean
+  hidden: false
+  default: true
+- name: related
+  label: Related
+  type: boolean
+  hidden: false
+  default: true
+pages:
+- _posts/2018-03-29-welcome-to-jekyll.markdown

@@ -1,0 +1,70 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: single
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: permalink
+  label: Permalink
+  type: text
+  hidden: false
+  default: ''
+- name: header
+  label: Header
+  type: field_group
+  fields:
+  - name: overlay_color
+    label: Overlay color
+    type: text
+    hidden: false
+    default: ''
+  - name: overlay_filter
+    label: Overlay filter
+    type: text
+    hidden: false
+    default: ''
+  - name: overlay_image
+    label: Overlay image
+    type: file
+    hidden: false
+    default: ''
+  - name: cta_label
+    label: Cta label
+    type: text
+    hidden: false
+    default: ''
+  - name: cta_url
+    label: Cta url
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
+- name: excerpt
+  label: Excerpt
+  type: textarea
+  hidden: false
+  default: ''
+- name: author_profile
+  label: Author profile
+  type: boolean
+  hidden: false
+  default: true
+pages:
+- _pages/organizations.md
+- _pages/meetups.md
+- index.md
+- _pages/developers.md
+- _pages/coworking.md
+- _pages/conferences.md
+- _pages/companies.md
+- _pages/about.md
+- 404.html
