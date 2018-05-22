@@ -1,6 +1,6 @@
 ---
 name: BSides Knoxville #Name of conference
-image: /assets/images/knoxville_bsides.jpg #Image url you want displayed
+image: /assets/images/conferences/knoxville_bsides.jpg #Image url you want displayed
 online: #Online links
     website: http://bsidesknoxville.com/
     twitter: bsidesknoxville

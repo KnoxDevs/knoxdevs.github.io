@@ -1,6 +1,6 @@
 ---
 name: CodeStock #Name of conference
-image: /assets/images/codestock_black.png #Image url you want displayed
+image: /assets/images/conferences/codestock_black.png #Image url you want displayed
 online: #Online links
     website: https://codestock.org
     twitter: CodeStock

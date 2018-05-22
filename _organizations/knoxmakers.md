@@ -1,6 +1,6 @@
 ---
 name: Knox Makers #Name of organization
-image: /assets/images/knox_makers_header.webp #Image url you want displayed
+image: /assets/images/organizations/knox_makers_header.webp #Image url you want displayed
 online: #Online links
     website: knoxmakers.org 
 location: # Organization Location

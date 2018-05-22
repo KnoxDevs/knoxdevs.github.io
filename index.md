@@ -6,6 +6,7 @@ layout: splash
 header:
     overlay_color: "#000"
     overlay_filter: "0.5"
+    overlay_image: /assets/images/bg.jpg
     cta_label: "Learn More"
     cta_url: "/about/"
 excerpt: KnoxDevs is a registered non-profit organization whose sole mission is to foster a healthy software developer community in Knoxville, TN.
@@ -15,11 +16,15 @@ excerpt: KnoxDevs is a registered non-profit organization whose sole mission is 
 
 # Proudly Supported by:
 
-- Premier Staffing
+<img src="/assets/images/sponsors/premier_staffing.jpg" alt="Premier Staffing" style="width:20em" />
 
-## Also supported by:
+## June Event support from:
 
-- Aviro Analytics
-- Cirruspath
+<div id="row">
+<img src="/assets/images/sponsors/avrio_analytics.jpg" alt="Avrio Analytics" style="width:15em" />
 
+<img src="/assets/images/sponsors/cirrus_insight.png" alt="Cirrus Insight" style="width:15em" />
+
+</div>
+<br/>
 <iframe src="https://calendar.google.com/calendar/b/1/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=support%40knoxdevs.com&amp;color=%231B887A&amp;ctz=America%2FNew_York" style="border-width:0" width="100%" max-width = "700" height="500" frameborder="0" scrolling="no"></iframe>
