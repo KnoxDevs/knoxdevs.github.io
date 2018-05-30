@@ -8,9 +8,18 @@ permalink: "/conferences/"
 The Southeast is home to a variety of conferences that often feature the talent groomed here in Knoxville. Below is a list of active conferences that not only are often attended by developers here in Knoxville, but have featured speakers from Knoxville as well.
 
 <hr>
+<!-- Ensure that conferences are sorted alphabetically, not based on file name in `_data` folder -->
+{%- capture conference_name -%}
+    {%- for conferences_array in site.data.conferences -%}
+       {{ conferences_array[1] | map: 'name'}} |
+    {%- endfor -%}
+{%- endcapture -%}
+{% assign sorted_conferencename = conference_name | split: ' |' | sort_natural %}
+
 <section class="cards">
-{% assign conferences = site.conferences | sort: 'name' %}
-{% for conference in conferences %}
+{% for conference_name in sorted_conferencename %}
+{% assign conferences = site.data.conferences | where:'name',conference_name %}
+{% assign conference = conferences[0] %}
 <article class="card">
     <header class="card__title">
       <h3>{{conference.name}}</h3>

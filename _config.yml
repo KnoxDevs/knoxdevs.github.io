@@ -99,7 +99,7 @@ analytics:
 author:
   name             : "KnoxDevs"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "A nonprofit umbrella of meetups connecting and supporting software developers in Knoxville, TN"
+  bio              : "A nonprofit umbrella organization of groups that connects and supports software developers in Knoxville, TN"
   location         : "Knoxville, TN"
   email            :
   uri              :
@@ -110,7 +110,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "knoxdevs"
   gitlab           :
   google_plus      :
   keybase          :
@@ -126,7 +126,7 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  youtube          : "https://www.youtube.com/channel/UCkRNGdSNWUL02dcAHdkYtBA" # "https://youtube.com/c/MichaelRoseDesign"
 
 
 # Reading Files
@@ -160,7 +160,7 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
-  - _meetups/_template.md # ignore the template for the meetups information.
+  - _groups/_template.md # ignore the template for the meetups information.
 keep_files:
   - .git
   - .svn
@@ -242,14 +242,8 @@ compress_html:
   ignore:
     envs: development
 
-collections:
-  - meetups
-  - companies
-  - coworking
-  - conferences
-  - organizations
-  - organizers
-  - developers
+# collections:
+# removed collections
 
 # Defaults
 defaults:

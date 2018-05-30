@@ -8,12 +8,21 @@ permalink: "/organizations/"
 Knoxville is home to a variety of organizations that help support local software developers through various programs they offer. Below is a list of active organizations that are active in the community. Some even support meetups here locally.
 
 <hr>
+<!-- Ensure that organizations are sorted alphabetically, not based on file name in `_data` folder -->
+{%- capture organization_name -%}
+    {%- for organizations_array in site.data.organizations -%}
+       {{ organizations_array[1] | map: 'name'}} |
+    {%- endfor -%}
+{%- endcapture -%}
+{% assign sorted_organizationname = organization_name | split: ' |' | sort_natural %}
+
 <section class="cards">
-{% assign organizations = site.organizations | sort: 'name' %}
-{% for organization in organizations %}
+{% for organization_name in sorted_organizationname %}
+{% assign organizations = site.data.organizations | where:'name',organization_name %}
+{% assign organization = organizations[0] %}
 <article class="card">
     <header class="card__title">
-      <h3>{{organization.name}}</h3>
+      <h3 id="{{organization.name | url_encode }}">{{organization.name}}</h3>
     </header>
     <figure class="card__image">
         <img src="{{organization.image}}">

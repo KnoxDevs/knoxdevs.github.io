@@ -8,9 +8,18 @@ permalink: "/companies/"
 Knoxville is home to a variety of companies that employ a wide ranging talent of software developers of all ages, backgrounds, and experiences. Below is a list of active companies that not only employ great people, but are active in the community as well. Some even support meetups here locally.
 
 <hr/>
+<!-- Ensure that companies are sorted alphabetically, not based on file name in `_data` folder -->
+{%- capture company_name -%}
+    {%- for companies_array in site.data.companies -%}
+       {{ companies_array[1] | map: 'name'}} |
+    {%- endfor -%}
+{%- endcapture -%}
+{% assign sorted_companyname = company_name | split: ' |' | sort_natural %}
+
 <section class="cards">
-{% assign companies = site.companies | sort: 'name' %}
-{% for company in companies %}
+{% for company_name in sorted_companyname %}
+{% assign companies = site.data.companies | where:'name',company_name %}
+{% assign company = companies[0] %}
 <article class="card">
     <header class="card__title">
       <h3>{{company.name}}</h3>

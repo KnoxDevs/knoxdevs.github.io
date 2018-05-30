@@ -2,6 +2,7 @@
 layout: single
 title: About
 permalink: /about/
+last_modified_at: 2018-05-29T16:00:00-04:00
 ---
 KnoxDevs is a registered non-profit organization whose sole mission is to foster a healthy software developer community in Knoxville, TN.
 
@@ -24,20 +25,46 @@ Members should follow the golden rule: “One should treat others as one would l
 ><a name="fn1">1</a>: Examples include offensive comments, verbal threats or demands, sexualized images in public spaces, intimidation, stalking, harassing photography or recording, sustained disruption of sessions or events, unwelcome physical contact or sexual attention, and the advocating or encouragement of any of the above behavior.
 
 ## Organizers
+<!-- Get just the last name followed by the full name so that we can sort by last name, which is typically how sorting is done-->
+{%- capture organizer_lastname_name -%}
+    {%- for organizers_array in site.data.organizers -%}
+       {{ organizers_array[1] | map: 'name' | split: ' ' | last | remove: '"]' | escape }}, {{ organizers_array[1] | map: 'name'}} |
+    {%- endfor -%}
+{%- endcapture -%}
+{% assign sorted_lastname_name = organizer_lastname_name | split: ' |' | sort_natural %}
+<!-- Get just the last name -->
+{%- capture organizer_lastname -%}
+    {%- for organizers_array in site.data.organizers -%}
+       {{ organizers_array[1] | map: 'name' | split: ' ' | last | remove: '"]' | escape }}, |
+    {%- endfor -%}
+{%- endcapture -%}
+{% assign sorted_lastname = organizer_lastname | split: '|' | sort_natural %}
+<!-- Get the full names by subtraction. Really. -->
+{%- capture sorted_organizers -%}
+    {%- for name in sorted_lastname_name -%}
+            {{ name | replace: sorted_lastname[forloop.index0], ''}} |
+    {%- endfor -%}
+{%- endcapture -%}
+{% assign sorted = sorted_organizers | split: ' |' %}
+<!-- Now make the cards -->
 <section class="cards">
-{% assign organizers = site.organizers | sort: 'rank' %}
-{% for organizer in organizers %}
+{% for organizer_name in sorted %}
+{% assign organizers = site.data.organizers | where:'name',organizer_name %}
+{% assign organizer = organizers[0] %}
 <article class="card">
     <header class="card__title">
-      <h3>{{organizer.name}}</h3>
+      <h3 id="{{organizer.name | url_encode}}">{{organizer.name}}</h3>
     </header>
     <figure class="card__image">
         <img src="{{organizer.image}}">
     </figure>
     <main class="card__description">
-      {{ organizer.content | strip_html | truncatewords:50 }}
+        {{ organizer.blurb | strip_html | truncatewords:50 }}
     </main>
   <footer class="card__footer">
+    {% if organizer.group %}
+        <small> {{organizer.group | join: ', '}} Organizer</small>
+    {% endif %}
       <ul>
           {% if organizer.online.github %}
           <li><a href="https://github.com/{{ organizer.online.github }}" target="_blank"><img src="/assets/images/icon-github.svg" class="icon icon-github"></a></li>
