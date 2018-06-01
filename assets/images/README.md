@@ -6,7 +6,6 @@ This subfolder is organized in a (hopefully) logical way, that mirrors the `_dat
 assets\images
 .
 ├── README.md
-├── companies
 ├── conferences
 ├── coworking
 ├── groups
