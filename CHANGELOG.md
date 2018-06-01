@@ -5,6 +5,7 @@
 
 - Added a Changelog
 - Built tempaltes for issues and PRs.
+- Made sure all previously externally linked images were added to and then served from the `assets` folder.
 
 ** Addressed issues: **
 - Added language guiding a user to install jekyll and build locally before sending a PR. [\#1](https://github.com/KnoxDevs/knoxdevs.github.io/issues/1)
