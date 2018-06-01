@@ -10,7 +10,7 @@ Check out the [Contributing Guide](https://github.com/KnoxDevs/knoxdevs.github.i
 1. install jekyll
 2. clone the repo
 3. add your contribution
-4. build locally
+4. serve locally
 5. submit a PR where the two or so files you are changing can easily be seen. Some tips for good PRs are in that [guide](https://github.com/KnoxDevs/knoxdevs.github.io/blob/master/Contributing.md)
 6. profit. 
 

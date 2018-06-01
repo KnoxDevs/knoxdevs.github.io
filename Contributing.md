@@ -5,6 +5,23 @@ a slack message, or any other method with the owners of this repository before m
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
+## Welcome to Jekyll
+
+This repo uses [Jekyll](https://jekyllrb.com/docs/home/#what-is-jekyll-exactly), a static site generator to serve the relatively basic web content that KnoxDevs hope to serve to the community. 
+
+### Serving the website locally
+
+Once you install [Jekyll](https://jekyllrb.com/docs/installation/) locally (use `bundler` it makes `ruby` life less painful), you will clone this repo, and then run:
+
+```bash
+bundle exec jekyll serve
+```
+This ensures that your local copy of Jekyll has the right stuff to preview your contributions.
+
+### Windows 10 users
+
+We highly recommend following the installation process using the [Bash on Windows 10 method](https://jekyllrb.com/docs/windows/#installation-via-bash-on-windows-10). It is **much** better than the complicated Windows process. _insert your Windows jokes here_.  ¯\\_(ツ)\_/¯
+
 ## Pull Request Process
 
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a 

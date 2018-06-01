@@ -10,6 +10,9 @@ A clear and concise description of what the problem is. Ex. I'm always frustrate
 **Describe the update that's needed**
 A clear and concise description of what you want to happen.
 
+**Have you tried sending a pull request**
+Most likely, you can add the info that you would like to see! There is a README in each subfolder within the `_data` folder. We can guide you through the process.
+
 **Does the data need to be removed?**
 Does the resource/group no longer exist? Has the organizer stepped down or blogger moved out of the area?
 
