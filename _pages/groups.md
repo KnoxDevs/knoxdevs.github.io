@@ -32,7 +32,7 @@ Knoxville is home to a variety of groups that cater to the robust software devel
     </main> 
     <footer class="card__footer">
         {% if group.slack_channel %}
-        <img src="/assets/images/icon-slack.svg" class="icon icon-slack">
+        <img src="/assets/images/icons/icon-slack.svg" class="icon icon-slack">
         <code>
             <a href="https://knoxdevs.slack.com/messages/{{ group.slack_channel }}"  target="_blank" title="Join the conversation on the KnoxDevs slack in the {{ group.slack_channel }} channel!">#{{ group.slack_channel }}</a>
         </code>
@@ -40,33 +40,33 @@ Knoxville is home to a variety of groups that cater to the robust software devel
         <ul>
             {% if group.online.github %}
             <li>
-                <a href="https://github.com/{{ group.online.github }}" target="_blank"><img src="/assets/images/icon-github.svg" class="icon icon-github"></a>
+                <a href="https://github.com/{{ group.online.github }}" target="_blank"><img src="/assets/images/icons/icon-github.svg" class="icon icon-github"></a>
             </li>
             {% endif %}
             {% if group.online.meetup %}
             <li>
                 <a href="https://meetup.com/{{ group.online.meetup }}" target="_blank">
-                    <img src="/assets/images/icon-meetup.svg" class="icon icon-meetup">
+                    <img src="/assets/images/icons/icon-meetup.svg" class="icon icon-meetup">
                 </a>
             </li>
             {% endif %}
             {% if group.online.twitter %}
             <li>
                 <a href="https://twitter.com/{{ group.online.twitter }}" target="_blank">
-                    <img src="/assets/images/icon-twitter.svg" class="icon icon-twitter">
+                    <img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter">
                 </a>
             </li>
             {% endif %}
             {% if group.online.website %}
             <li>
                 <a href="{{ group.online.website }}" target="_blank">
-                <img src="/assets/images/icon-link.svg" class="icon icon-website">
+                <img src="/assets/images/icons/icon-link.svg" class="icon icon-website">
                 </a>
             </li>
             {% endif %}
             {% if group.location.gmap %}
             <li data-toggle="tooltip" data-placement="bottom" title="{{group.location.name}}">
-                <a href="https://goo.gl/maps/{{ group.location.gmap }}" target="_blank"><img src="/assets/images/icon-location.svg" class="icon icon-location">
+                <a href="https://goo.gl/maps/{{ group.location.gmap }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location">
                 </a>
             </li>
             {% endif %}

@@ -22,7 +22,7 @@ name                     : "KnoxDevs"
 description              : "A nonprofit umbrella of meetups connecting and supporting software developers in Knoxville, TN"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : knoxdevs.com/knoxdevs.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : knoxdevs/knoxdevs.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200

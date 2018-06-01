@@ -67,13 +67,13 @@ Members should follow the golden rule: “One should treat others as one would l
     {% endif %}
       <ul>
           {% if organizer.online.github %}
-          <li><a href="https://github.com/{{ organizer.online.github }}" target="_blank"><img src="/assets/images/icon-github.svg" class="icon icon-github"></a></li>
+          <li><a href="https://github.com/{{ organizer.online.github }}" target="_blank"><img src="/assets/images/icons/icon-github.svg" class="icon icon-github"></a></li>
           {% endif %}
           {% if organizer.online.twitter %}
-          <li><a href="https://twitter.com/{{ organizer.online.twitter }}" target="_blank"><img src="/assets/images/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          <li><a href="https://twitter.com/{{ organizer.online.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
           {% endif %}
           {% if organizer.online.website %}
-          <li><a href="http://{{ organizer.online.website }}" target="_blank"><img src="/assets/images/icon-link.svg" class="icon icon-website"></a></li>
+          <li><a href="http://{{ organizer.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
           {% endif %}
       </ul>
   </footer>

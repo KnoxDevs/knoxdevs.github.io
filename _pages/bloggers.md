@@ -48,10 +48,10 @@ Knoxville is home to a variety of software devs, many of whom also blog! Below i
       Last updated {{blogger.date_updated | date: '%B %Y' }}
       <ul>
           {% if blogger.online.twitter %}
-          <li><a href="https://twitter.com/{{ blogger.online.twitter }}" target="_blank"><img src="/assets/images/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          <li><a href="https://twitter.com/{{ blogger.online.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
           {% endif %}
           {% if blogger.online.website %}
-          <li><a href="{{ blogger.online.website }}" target="_blank"><img src="/assets/images/icon-link.svg" class="icon icon-website"></a></li>
+          <li><a href="{{ blogger.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
           {% endif %}
       </ul>
   </footer>

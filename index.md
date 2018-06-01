@@ -4,8 +4,8 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: splash
 header:
-    overlay_color: "#37ccfe"
-    overlay_filter: "0.1"
+    overlay_color: "#0180ab"
+    overlay_filter: "0.5"
     overlay_image: /assets/images/bg.jpg
     cta_label: "Learn More"
     cta_url: "/about/"
@@ -30,7 +30,7 @@ excerpt: KnoxDevs is a registered non-profit organization whose sole mission is 
 
 ## Join us on Slack!
 
-Join our slack team to get connected with the greater software community in Knoxville!
+[Join our slack team](http://knoxdevs-slackin.herokuapp.com/) to get connected with the greater software community in Knoxville!
 
 <iframe src="http://knoxdevs-slackin.herokuapp.com/iframe?large" class="__slackin" style="border-width: 0px; width: 161px; height: 30px; visibility: visible;"></iframe>
 
