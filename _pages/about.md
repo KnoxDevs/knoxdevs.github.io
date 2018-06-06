@@ -2,7 +2,7 @@
 layout: single
 title: About
 permalink: /about/
-last_modified_at: 2018-05-29T16:00:00-04:00
+last_modified_at: 2018-06-05T16:00:00-04:00
 ---
 KnoxDevs is a registered non-profit organization whose sole mission is to foster a healthy software developer community in Knoxville, TN.
 
@@ -59,18 +59,18 @@ Members should follow the golden rule: “One should treat others as one would l
         <img src="{{organizer.image}}">
     </figure>
     <main class="card__description">
-        {{ organizer.blurb | strip_html | truncatewords:50 }}
+        {{ organizer.description | strip_html | truncatewords:50 }}
     </main>
   <footer class="card__footer">
     {% if organizer.group %}
         <small> {{organizer.group | join: ', '}} Organizer</small>
     {% endif %}
       <ul>
-          {% if organizer.online.github %}
-          <li><a href="https://github.com/{{ organizer.online.github }}" target="_blank"><img src="/assets/images/icons/icon-github.svg" class="icon icon-github"></a></li>
+          {% if organizer.social.github %}
+          <li><a href="https://github.com/{{ organizer.social.github }}" target="_blank"><img src="/assets/images/icons/icon-github.svg" class="icon icon-github"></a></li>
           {% endif %}
-          {% if organizer.online.twitter %}
-          <li><a href="https://twitter.com/{{ organizer.online.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          {% if organizer.social.twitter %}
+          <li><a href="https://twitter.com/{{ organizer.social.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
           {% endif %}
           {% if organizer.online.website %}
           <li><a href="http://{{ organizer.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
