@@ -42,7 +42,7 @@ Knoxville is home to a variety of software devs, many of whom also blog! Below i
         <img src="{{blogger.image}}">
     </figure>
     <main class="card__description">
-        {{ blogger.content | strip_html | truncatewords:50 }}
+        {{ blogger.blurb | strip_html | truncatewords:50 }}
     </main>  
   <footer class="card__footer">
       Last updated {{blogger.date_updated | date: '%B %Y' }}
