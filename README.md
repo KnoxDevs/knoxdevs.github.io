@@ -7,12 +7,16 @@ This repository is a collection of pages and data files that are used by Github 
 Check out the [Contributing Guide](https://github.com/KnoxDevs/knoxdevs.github.io/blob/master/Contributing.md)
 
 **TL;DR**
-1. install jekyll
-2. clone the repo
-3. add your contribution
-4. serve locally
-5. submit a PR where the two or so files you are changing can easily be seen. Some tips for good PRs are in that [guide](https://github.com/KnoxDevs/knoxdevs.github.io/blob/master/Contributing.md)
-6. profit. 
+1. [fork and clone the github repo](https://guides.github.com/activities/forking/)
+2. add your contribution to a new branch named `<username>/<feature-name>`
+3. [install jekyll](https://jekyllrb.com/docs/installation/)
+4. install jekyll project ruby dependencies `bundle install`
+5. serve locally `bundle exec jekyll serve` and check that your
+   addition is served properly
+6. submit a PR where the two or so files you are changing can easily
+   be seen. Some tips for good PRs are in that
+   [guide](https://github.com/KnoxDevs/knoxdevs.github.io/blob/master/Contributing.md)
+7. profit. 
 
 ## Have an Issue or Request?
 
