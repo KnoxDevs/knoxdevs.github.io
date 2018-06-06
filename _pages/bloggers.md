@@ -42,13 +42,15 @@ Knoxville is home to a variety of software devs, many of whom also blog! Below i
         <img src="{{blogger.image}}">
     </figure>
     <main class="card__description">
-        {{ blogger.blurb | strip_html | truncatewords:50 }}
+        {{ blogger.description | strip_html | truncatewords:50 }}
     </main>  
   <footer class="card__footer">
-      Last updated {{blogger.date_updated | date: '%B %Y' }}
       <ul>
-          {% if blogger.online.twitter %}
-          <li><a href="https://twitter.com/{{ blogger.online.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          {% if blogger.social.twitter %}
+          <li><a href="https://twitter.com/{{ blogger.social.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          {% endif %}
+          {% if blogger.social.github %}
+          <li><a href="https://github.com/{{ blogger.social.github }}" target="_blank"><img src="/assets/images/icons/icon-github.svg" class="icon icon-github"></a></li>
           {% endif %}
           {% if blogger.online.website %}
           <li><a href="{{ blogger.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
