@@ -9,7 +9,7 @@ Are you a group organizer? Are you a software developer looking for help to orga
 
 - great [organizations](#Organizations) that often support developers
 - superb [regional conferences](#Conferences)
-- awesome [event spots](#Event+Spaces)
+- awesome [coworking spots](#Coworking+Spaces)
 - the perfect [spaces to host events](#Event+Spaces).
 
 <h2 id="Organizations">Organizations</h2>
@@ -37,18 +37,18 @@ Knoxville is home to a variety of organizations that help support local software
         <img src="{{organization.image}}">
     </figure>
     <main class="card__description">
-        {{ organization.blurb | strip_html | truncatewords:50 }}
+        {{ organization.description | strip_html | truncatewords:50 }}
     </main>  
     <footer class="card__footer">
       <ul>
           {% if organization.online.twitter %}
-          <li><a href="https://twitter.com/{{ organization.online.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          <li><a href="https://twitter.com/{{ organization.social.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
           {% endif %}
           {% if organization.online.website %}
           <li><a href="{{ organization.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
           {% endif %}
-          {% if organization.location.gmap %}
-          <li data-toggle="tooltip" data-placement="bottom" title="{{organization.location.name}}"><a href="https://goo.gl/maps/{{ organization.location.gmap }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location"></a></li>
+          {% if organization.location.address %}
+          <li data-toggle="tooltip" data-placement="bottom" title="{{organization.location.name}}"><a href="https://www.google.com/maps/place/{{ organization.location.address | url_encode }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location"></a></li>
           {% endif %}
       </ul>
   </footer>
@@ -87,7 +87,7 @@ The Southeast is home to a variety of conferences that often feature the talent 
       <img src="{{conference.image}}">
     </figure>
     <main class="card__description">
-      {{ conference.blurb | strip_html | truncatewords:50 }}
+      {{ conference.description | strip_html | truncatewords:50 }}
     </main>  
     <footer class="card__footer">
         <ul>
@@ -97,8 +97,8 @@ The Southeast is home to a variety of conferences that often feature the talent 
           {% if conference.online.website %}
           <li><a href="{{ conference.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
           {% endif %}
-          {% if conference.location.gmap %}
-          <li data-toggle="tooltip" data-placement="bottom" title="{{conference.location.name}}"><a href="https://goo.gl/maps/{{ conference.location.gmap }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location"></a></li>
+          {% if conference.location.address %}
+          <li data-toggle="tooltip" data-placement="bottom" title="{{conference.location.name}}"><a href="https://www.google.com/maps/place/{{ conference.location.address | url_encode }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location"></a></li>
           {% endif %}
         </ul>
     </footer>
@@ -112,22 +112,22 @@ The Southeast is home to a variety of conferences that often feature the talent 
 Are you (or do you attend) a regional conference that you feel developers in Knoxville would be interested in attending? You can update the listing here by sending a Pull Request to the individual markdown file [here]({{ site.github.repository_url }}/tree/master/{{ page.relative_path }}_data/conferences).
 </section>
 
-<h2 id="Event+Spaces">Event Spaces</h2>
+<h2 id="Coworking+Spaces">Coworking Spaces</h2>
 
 Knoxville is home to a variety of event spaces that provide a place to work - of all sizes - for a wide range of talented software developers of all ages, backgrounds, and experiences. Below is a list of active event spaces that not only provide an office to great people here in Knoxville, but are active in providing meeting space to the community as well.
 
 <hr>
 <!-- Ensure that spaces are sorted alphabetically, not based on file name in `_data` folder -->
-{%- capture event_name -%}
+{%- capture coworking_space_name -%}
     {%- for spaces_array in site.data.event -%}
        {{ spaces_array[1] | map: 'name'}} |
     {%- endfor -%}
 {%- endcapture -%}
-{% assign sorted_eventname = event_name | split: ' |' | sort_natural %}
+{% assign sorted_coworking_space_name = coworking_space_name | split: ' |' | sort_natural %}
 
 <section class="cards">
-{% for event_name in sorted_eventname %}
-{% assign cowork_spaces = site.data.event | where:'name',event_name %}
+{% for coworking_space_name in sorted_coworking_space_name %}
+{% assign cowork_spaces = site.data.coworking_spaces | where:'name',coworking_space_name %}
 {% assign cowork_space = cowork_spaces[0] %}
 <article class="card">
     <header class="card__title">
@@ -137,7 +137,7 @@ Knoxville is home to a variety of event spaces that provide a place to work - of
         <img src="{{cowork_space.image}}">
     </figure>
     <main class="card__description">
-        {{ cowork_space.blurb | strip_html | truncatewords:50 }}
+        {{ cowork_space.description | strip_html | truncatewords:50 }}
     </main>  
   <footer class="card__footer">
       <ul>
@@ -147,8 +147,8 @@ Knoxville is home to a variety of event spaces that provide a place to work - of
           {% if cowork_space.online.website %}
           <li><a href="{{ cowork_space.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
           {% endif %}
-          {% if cowork_space.location.gmap %}
-          <li data-toggle="tooltip" data-placement="bottom" title="{{cowork_space.location.name}}"><a href="https://goo.gl/maps/{{ cowork_space.location.gmap }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location"></a></li>
+          {% if cowork_space.location.address %}
+          <li data-toggle="tooltip" data-placement="bottom" title="{{cowork_space.location.name}}"><a href="https://www.google.com/maps/place/{{ cowork_space.location.address | url_encode }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location"></a></li>
           {% endif %}
       </ul>
   </footer>
@@ -159,7 +159,7 @@ Knoxville is home to a variety of event spaces that provide a place to work - of
 <hr />
 
 <section id="update_the_list_event" markdown="1">
-Are you a local event space (or do you regularly work at one) that provides a event locations for local software developers and would like to be involved in Knoxville' software developer community? You can update the listing here by sending a Pull Request to the individual markdown file [here]({{ site.github.repository_url }}/tree/master/{{ page.relative_path }}_data/event).
+Are you a local event space (or do you regularly work at one) that provides a event locations for local software developers and would like to be involved in Knoxville' software developer community? You can update the listing here by sending a Pull Request to the individual markdown file [here]({{ site.github.repository_url }}/tree/master/{{ page.relative_path }}_data/coworking_spaces).
 
 </section>
 
@@ -188,7 +188,7 @@ Knoxville is home to a variety of event spaces that provide a place to work - of
         <img src="{{event_space.image}}">
     </figure>
     <main class="card__description">
-        {{ event_space.blurb | strip_html | truncatewords:50 }}
+        {{ event_space.description | strip_html | truncatewords:50 }}
     </main>  
   <footer class="card__footer">
       <ul>
@@ -196,10 +196,10 @@ Knoxville is home to a variety of event spaces that provide a place to work - of
           <li><a href="https://twitter.com/{{ event_space.online.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
           {% endif %}
           {% if event_space.online.website %}
-          <li><a href="{{ event_space.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
+          <li><a href="http://{{ event_space.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
           {% endif %}
-          {% if event_space.location.gmap %}
-          <li data-toggle="tooltip" data-placement="bottom" title="{{event_space.location.name}}"><a href="https://goo.gl/maps/{{ event_space.location.gmap }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location"></a></li>
+          {% if event_space.location.address %}
+          <li data-toggle="tooltip" data-placement="bottom" title="{{event_space.location.name}}"><a href="https://www.google.com/maps/place/{{ event_space.location.address | url_encode }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location"></a></li>
           {% endif %}
       </ul>
   </footer>

@@ -28,7 +28,7 @@ Knoxville is home to a variety of groups that cater to the robust software devel
         <img src="{{group.image}}">
     </figure>
     <main class="card__description">
-        {{ group.blurb | markdownify | truncatewords:50 }}
+        {{ group.description | markdownify | truncatewords:50 }}
     </main> 
     <footer class="card__footer">
         {% if group.slack_channel %}
@@ -38,21 +38,21 @@ Knoxville is home to a variety of groups that cater to the robust software devel
         </code>
         {% endif %}
         <ul>
-            {% if group.online.github %}
+            {% if group.social.github %}
             <li>
-                <a href="https://github.com/{{ group.online.github }}" target="_blank"><img src="/assets/images/icons/icon-github.svg" class="icon icon-github"></a>
+                <a href="https://github.com/{{ group.social.github }}" target="_blank"><img src="/assets/images/icons/icon-github.svg" class="icon icon-github"></a>
             </li>
             {% endif %}
-            {% if group.online.meetup %}
+            {% if group.social.meetup %}
             <li>
-                <a href="https://meetup.com/{{ group.online.meetup }}" target="_blank">
+                <a href="https://meetup.com/{{ group.social.meetup }}" target="_blank">
                     <img src="/assets/images/icons/icon-meetup.svg" class="icon icon-meetup">
                 </a>
             </li>
             {% endif %}
-            {% if group.online.twitter %}
+            {% if group.social.twitter %}
             <li>
-                <a href="https://twitter.com/{{ group.online.twitter }}" target="_blank">
+                <a href="https://twitter.com/{{ group.social.twitter }}" target="_blank">
                     <img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter">
                 </a>
             </li>
@@ -64,9 +64,9 @@ Knoxville is home to a variety of groups that cater to the robust software devel
                 </a>
             </li>
             {% endif %}
-            {% if group.location.gmap %}
+            {% if group.location.address %}
             <li data-toggle="tooltip" data-placement="bottom" title="{{group.location.name}}">
-                <a href="https://goo.gl/maps/{{ group.location.gmap }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location">
+                <a href="https://www.google.com/maps/place/{{ group.location.address | url_encode }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location">
                 </a>
             </li>
             {% endif %}
@@ -79,8 +79,6 @@ Knoxville is home to a variety of groups that cater to the robust software devel
 <hr />
 
 <section id="update_the_list" markdown="1">
-Are you an existing group organizer? You can update the listing here by sending a Pull Request to the individual markdown file [here](#).
-
-Do you not see your group here? Send a Pull Request to add your group listing. You can see the template for groups [here](#).
+Are you an existing group organizer or don't see your group here? Send a Pull Request to add your group listing. You can see the template for groups [here]({{ site.github.repository_url }}/tree/master/{{ page.relative_path }}_data/groups).
 
 </section>

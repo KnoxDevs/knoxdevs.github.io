@@ -1,5 +1,14 @@
 # Change Log
-## [0.3.3](https://github.com/skywinder/ActionSheetPicker-3.0/tree/2.3.0) (2018-06-01)
+
+## [0.3.3] (2019-06-06)
+
+** Implemented enhancements:**
+- More concise language on the READMEs in the individual data subfolders to guide website visitors who link to the repo on trying to submit a PR before submitting an issue or messaging on slack only.
+
+**Addressed issues: **
+- Reformated data entries (like groups) to address non-clear language.  [\#2](https://github.com/KnoxDevs/knoxdevs.github.io/issues/1)
+
+## [0.3.2] (2018-06-01)
 
 ** Implemented enhancements:**
 
