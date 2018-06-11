@@ -55,6 +55,9 @@ Knoxville is home to a variety of software devs, many of whom also blog! Below i
           {% if blogger.online.website %}
           <li><a href="{{ blogger.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
           {% endif %}
+          {% if blogger.online.feed %}
+          <li><a href="{{ blogger.online.feed }}" target="_blank"><img src="/assets/images/icons/icon-rss.svg" class="icon icon-rss"></a></li>
+          {% endif %}
       </ul>
   </footer>
 </article>
