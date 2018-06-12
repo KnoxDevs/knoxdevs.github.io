@@ -35,4 +35,7 @@ excerpt: KnoxDevs is a registered non-profit organization whose sole mission is 
 <iframe src="http://knoxdevs-slackin.herokuapp.com/iframe?large" class="__slackin" style="border-width: 0px; width: 161px; height: 30px; visibility: visible;"></iframe>
 
 <br/>
+
+<h2 id="Events">Events</h2>
+
 <iframe src="https://calendar.google.com/calendar/b/1/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=support%40knoxdevs.com&amp;color=%231B887A&amp;ctz=America%2FNew_York" style="border-width:0" width="100%" max-width = "700" height="500" frameborder="0" scrolling="no"></iframe>

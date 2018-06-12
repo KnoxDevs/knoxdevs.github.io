@@ -63,7 +63,21 @@ Members should follow the golden rule: “One should treat others as one would l
     </main>
   <footer class="card__footer">
     {% if organizer.group %}
-        <small> {{organizer.group | join: ', '}} Organizer</small>
+        {% for group in organizer.group %}
+            {% if group contains "KnoxDevs" %}
+                {% if forloop.last == true %}
+                    <small>{{group}} Organizer</small>
+                {% else %}
+                    <small>{{group}}, </small>
+                {% endif %}
+            {% else %}
+                {% if forloop.last == true %}
+                    <small><a href = "{{absolute.url}}/groups/#{{ group | url_encode }}">{{group}}</a> Organizer</small>
+                {% else %}
+                    <small><a href = "{{absolute.url}}/groups/#{{ group | url_encode }}">{{group}}</a>, </small>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
     {% endif %}
       <ul>
           {% if organizer.social.github %}

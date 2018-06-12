@@ -36,7 +36,7 @@ Knoxville is home to a variety of software devs, many of whom also blog! Below i
 {% assign blogger = bloggers[0] %}
 <article class="card">
     <header class="card__title">
-      <h3>{{blogger.name}}</h3>
+      <h3 id="{{blogger.name | url_encode }}">{{blogger.name}}</h3>
     </header>
     <figure class="card__image">
         <img src="{{blogger.image}}">

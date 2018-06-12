@@ -31,6 +31,18 @@ Knoxville is home to a variety of groups that cater to the robust software devel
         {{ group.description | markdownify | truncatewords:50 }}
     </main> 
     <footer class="card__footer">
+        {% assign organizers = site.data.organizers | where:'group',group.name %}
+        {% unless organizers == empty %}
+            <small class="organizers">Organized by: 
+            {% for organizer in organizers %}
+                {% if forloop.last == true %}
+                    <a href="{{absolute.url}}/about/#{{ organizer.name | url_encode }}">{{organizer.name}}</a>
+                {% else %}
+                    <a href="{{absolute.url}}/about/#{{ organizer.name | url_encode }}">{{organizer.name}}</a>, 
+                {% endif %}   
+            {% endfor %}
+        </small><br/><br/>
+        {% endunless %}
         {% if group.slack_channel %}
         <img src="/assets/images/icons/icon-slack.svg" class="icon icon-slack">
         <code>
