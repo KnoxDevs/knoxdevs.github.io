@@ -9,14 +9,14 @@ Check out the [Contributing Guide](https://github.com/KnoxDevs/knoxdevs.github.i
 **TL;DR**
 1. [fork and clone the github repo](https://guides.github.com/activities/forking/)
 2. add your contribution to a new branch named `<username>/<feature-name>`
-3. [install jekyll](https://jekyllrb.com/docs/installation/)
+3. [install jekyll](https://jekyllrb.com/docs/installation/) OR [run a one liner Docker command](https://github.com/KnoxDevs/knoxdevs.github.io/blob/master/Contributing.md#docker-image) and skip to 6.
 4. install jekyll project ruby dependencies `bundle install`
-5. serve locally `bundle exec jekyll serve` and check that your
-   addition is served properly
-6. submit a PR where the two or so files you are changing can easily
+5. serve locally `bundle exec jekyll serve`
+6. check that your addition is served properly
+7. submit a PR where the two or so files you are changing can easily
    be seen. Some tips for good PRs are in that
    [guide](https://github.com/KnoxDevs/knoxdevs.github.io/blob/master/Contributing.md)
-7. profit. 
+8. profit. 
 
 ## Have an Issue or Request?
 

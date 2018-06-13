@@ -119,7 +119,7 @@ Knoxville is home to a variety of event spaces that provide a place to work - of
 <hr>
 <!-- Ensure that spaces are sorted alphabetically, not based on file name in `_data` folder -->
 {%- capture coworking_space_name -%}
-    {%- for spaces_array in site.data.event -%}
+    {%- for spaces_array in site.data.coworking_spaces -%}
        {{ spaces_array[1] | map: 'name'}} |
     {%- endfor -%}
 {%- endcapture -%}

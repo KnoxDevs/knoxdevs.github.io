@@ -22,6 +22,18 @@ This ensures that your local copy of Jekyll has the right stuff to preview your 
 
 We highly recommend following the installation process using the [Bash on Windows 10 method](https://jekyllrb.com/docs/windows/#installation-via-bash-on-windows-10). It is **much** better than the complicated Windows process. _insert your Windows jokes here_.  ¯\\_(ツ)\_/¯
 
+### Docker image
+
+Don't want to fiddle with all of that?
+
+We have tested out a docker image that works pretty well (and is actively updated on [Github](https://github.com/Starefossen/docker-github-pages)), clone this repo and using docker from the repo, run this oneliner:
+
+````bash
+docker run -t --rm -v "$PWD":/usr/src/app -p 80:4000 starefossen/github-pages
+````
+
+Port 80 was included for those of us using Docker ToolKit. You can otherwise just leave it as `4000:4000`.
+
 ## Pull Request Process
 
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a 
