@@ -21,10 +21,13 @@ excerpt: KnoxDevs is a registered non-profit organization whose sole mission is 
 ## June Event support from:
 
 <div id="row">
+<a href="http://www.resultstack.com/" target="_blank"><img src="/assets/images/sponsors/result_stack.png" alt="Result Stack" style="width:15em" /></a>
+</div>
+
+<div id="row">
 <a href="http://avrioanalytics.com/" target="_blank"><img src="/assets/images/sponsors/avrio_analytics.png" alt="Avrio Analytics" style="width:15em" /></a>
 
 <a href="https://www.cirrusinsight.com/" target="_blank"><img src="/assets/images/sponsors/cirrus_insight.png" alt="Cirrus Insight" style="width:15em" /></a>
-
 </div>
 <br/>
 
