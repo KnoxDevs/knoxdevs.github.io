@@ -36,13 +36,18 @@ Knoxville is home to a variety of software devs, many of whom also blog! Below i
 {% assign blogger = bloggers[0] %}
 <article class="card">
     <header class="card__title">
-      <h3 id="{{blogger.name | url_encode }}">{{blogger.name}}</h3>
+      <h3 id="{{blogger.name | replace: " ", "_" | url_encode | downcase }}">{{blogger.name}}</h3>
     </header>
     <figure class="card__image">
-        <img src="{{blogger.image}}">
+    {% capture image_path %}assets/images/bloggers/{{ blogger.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
+    {% for image in site.static_files %}
+        {% if image.path contains image_path %}
+            <img src="{{absolute.url}}{{image.path}}" alt ="{{ blogger.name }}"/>
+        {% endif %}
+    {% endfor %}
     </figure>
     <main class="card__description">
-        {{ blogger.description | strip_html | truncatewords:50 }}
+        {{ blogger.description | strip_html }}
     </main>  
   <footer class="card__footer">
       <ul>

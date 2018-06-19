@@ -22,10 +22,15 @@ Knoxville is home to a variety of groups that cater to the robust software devel
 {% assign group = groups[0] %}
 <article class="card">
     <header class="card__title">
-      <h3 id="{{group.name | url_encode }}">{{group.name}}</h3>
+      <h3 id="{{group.name | replace: " ", "_" | url_encode | downcase }}">{{group.name}}</h3>
     </header>
     <figure class="card__image">
-        <img src="{{group.image}}">
+    {% capture logo_path %}assets/images/groups/{{ group.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
+    {% for image in site.static_files %}
+        {% if image.path contains logo_path %}
+            <img src="{{absolute.url}}{{image.path}}" alt ="{{ group.name }}"/>
+        {% endif %}
+    {% endfor %}
     </figure>
     <main class="card__description">
         {{ group.description | markdownify | truncatewords:50 }}
@@ -36,9 +41,9 @@ Knoxville is home to a variety of groups that cater to the robust software devel
             <small class="organizers">Organized by: 
             {% for organizer in organizers %}
                 {% if forloop.last == true %}
-                    <a href="{{absolute.url}}/about/#{{ organizer.name | url_encode }}">{{organizer.name}}</a>
+                    <a href="{{absolute.url}}/about/#{{ organizer.name | replace: " ", "_" | url_encode | downcase }}">{{organizer.name}}</a>
                 {% else %}
-                    <a href="{{absolute.url}}/about/#{{ organizer.name | url_encode }}">{{organizer.name}}</a>, 
+                    <a href="{{absolute.url}}/about/#{{ organizer.name | replace: " ", "_" | url_encode | downcase }}">{{organizer.name}}</a>, 
                 {% endif %}   
             {% endfor %}
         </small><br/><br/>

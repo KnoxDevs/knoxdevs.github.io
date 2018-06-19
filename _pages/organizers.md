@@ -26,10 +26,15 @@
 {% assign organizer = organizers[0] %}
 <article class="card">
     <header class="card__title">
-      <h3 id="{{organizer.name | url_encode}}">{{organizer.name}}</h3>
+      <h3 id="{{organizer.name | replace: " ", "_" | url_encode | downcase }}">{{organizer.name}}</h3>
     </header>
     <figure class="card__image">
-        <img src="{{organizer.image}}">
+    {% capture image_path %}assets/images/organizers/{{ organizer.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
+    {% for image in site.static_files %}
+        {% if image.path contains image_path %}
+            <img src="{{absolute.url}}{{image.path}}" alt ="{{ organizer.name }}"/>
+        {% endif %}
+    {% endfor %}
     </figure>
     <main class="card__description">
         {{ organizer.description | strip_html }}
@@ -45,9 +50,9 @@
                 {% endif %}
             {% else %}
                 {% if forloop.last == true %}
-                    <small><a href = "{{absolute.url}}/groups/#{{ group | url_encode }}">{{group}}</a> Organizer</small>
+                    <small><a href = "{{absolute.url}}/groups/#{{ group | replace: " ", "_" | url_encode | downcase }}">{{group}}</a> Organizer</small>
                 {% else %}
-                    <small><a href = "{{absolute.url}}/groups/#{{ group | url_encode }}">{{group}}</a>, </small>
+                    <small><a href = "{{absolute.url}}/groups/#{{ group | replace: " ", "_" | url_encode | downcase }}">{{group}}</a>, </small>
                 {% endif %}
             {% endif %}
         {% endfor %}
