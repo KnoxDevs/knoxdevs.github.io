@@ -25,7 +25,7 @@ Knoxville is home to a variety of groups that cater to the robust software devel
       <h3 id="{{group.name | replace: " ", "_" | url_encode | downcase }}">{{group.name}}</h3>
     </header>
     <figure class="card__image">
-    {% capture logo_path %}assets/images/groups/{{ group.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
+    {% capture logo_path %}assets/cluster_images/groups/{{ group.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
     {% for image in site.static_files %}
         {% if image.path contains logo_path %}
             <img src="{{absolute.url}}{{image.path}}" alt ="{{ group.name }}"/>
@@ -49,7 +49,7 @@ Knoxville is home to a variety of groups that cater to the robust software devel
         </small><br/><br/>
         {% endunless %}
         {% if group.slack_channel %}
-        <img src="/assets/images/icons/icon-slack.svg" class="icon icon-slack">
+        <img src="/assets/icons/icon-slack.svg" class="icon icon-slack">
         <code>
             <a href="https://knoxdevs.slack.com/messages/{{ group.slack_channel }}"  target="_blank" title="Join the conversation on the KnoxDevs slack in the {{ group.slack_channel }} channel!">#{{ group.slack_channel }}</a>
         </code>
@@ -57,33 +57,33 @@ Knoxville is home to a variety of groups that cater to the robust software devel
         <ul>
             {% if group.social.github %}
             <li>
-                <a href="https://github.com/{{ group.social.github }}" target="_blank"><img src="/assets/images/icons/icon-github.svg" class="icon icon-github"></a>
+                <a href="https://github.com/{{ group.social.github }}" target="_blank"><img src="/assets/icons/icon-github.svg" class="icon icon-github"></a>
             </li>
             {% endif %}
             {% if group.social.meetup %}
             <li>
                 <a href="https://meetup.com/{{ group.social.meetup }}" target="_blank">
-                    <img src="/assets/images/icons/icon-meetup.svg" class="icon icon-meetup">
+                    <img src="/assets/icons/icon-meetup.svg" class="icon icon-meetup">
                 </a>
             </li>
             {% endif %}
             {% if group.social.twitter %}
             <li>
                 <a href="https://twitter.com/{{ group.social.twitter }}" target="_blank">
-                    <img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter">
+                    <img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter">
                 </a>
             </li>
             {% endif %}
             {% if group.online.website %}
             <li>
                 <a href="{{ group.online.website }}" target="_blank">
-                <img src="/assets/images/icons/icon-link.svg" class="icon icon-website">
+                <img src="/assets/icons/icon-link.svg" class="icon icon-website">
                 </a>
             </li>
             {% endif %}
             {% if group.location.address %}
             <li data-toggle="tooltip" data-placement="bottom" title="{{group.location.name}}">
-                <a href="https://www.google.com/maps/place/{{ group.location.address | url_encode }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location">
+                <a href="https://www.google.com/maps/place/{{ group.location.address | url_encode }}" target="_blank"><img src="/assets/icons/icon-location.svg" class="icon icon-location">
                 </a>
             </li>
             {% endif %}

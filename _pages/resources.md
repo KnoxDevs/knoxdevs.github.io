@@ -7,10 +7,10 @@ permalink: "/resources/"
 
 Are you a group organizer? Are you a software developer looking for help to organize something great? We have put together a list of resources to help you navigate Knoxville:
 
-- great [organizations](#Organizations) that often support developers
-- superb [regional conferences](#Conferences)
-- awesome [coworking spots](#Coworking+Spaces)
-- the perfect [spaces to host events](#Event+Spaces).
+- great [organizations](#organizations) that often support developers
+- superb [regional conferences](#conferences)
+- awesome [coworking spots](#coworking_spaces)
+- the perfect [spaces to host events](#event_spaces).
 
 <h2 id="organizations">Organizations</h2>
 
@@ -34,7 +34,7 @@ Knoxville is home to a variety of organizations that help support local software
       <h3 id="{{ organization.name | replace: " ", "_" | url_encode | downcase }}">{{organization.name}}</h3>
     </header>
     <figure class="card__image">
-    {% capture logo_path %}assets/images/organizations/{{ organization.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
+    {% capture logo_path %}assets/cluster_images/organizations/{{ organization.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
     {% for image in site.static_files %}
         {% if image.path contains logo_path %}
             <img src="{{absolute.url}}{{image.path}}" alt ="{{ organization.name }}"/>
@@ -47,13 +47,13 @@ Knoxville is home to a variety of organizations that help support local software
     <footer class="card__footer">
       <ul>
           {% if organization.online.twitter %}
-          <li><a href="https://twitter.com/{{ organization.social.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          <li><a href="https://twitter.com/{{ organization.social.twitter }}" target="_blank"><img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
           {% endif %}
           {% if organization.online.website %}
-          <li><a href="{{ organization.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
+          <li><a href="{{ organization.online.website }}" target="_blank"><img src="/assets/icons/icon-link.svg" class="icon icon-website"></a></li>
           {% endif %}
           {% if organization.location.address %}
-          <li data-toggle="tooltip" data-placement="bottom" title="{{organization.location.name}}"><a href="https://www.google.com/maps/place/{{ organization.location.address | url_encode }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location"></a></li>
+          <li data-toggle="tooltip" data-placement="bottom" title="{{organization.location.name}}"><a href="https://www.google.com/maps/place/{{ organization.location.address | url_encode }}" target="_blank"><img src="/assets/icons/icon-location.svg" class="icon icon-location"></a></li>
           {% endif %}
       </ul>
   </footer>
@@ -89,7 +89,7 @@ The Southeast is home to a variety of conferences that often feature the talent 
       <h3 id="{{ conference.name | replace: " ", "_" | url_encode | downcase }}">{{conference.name}}</h3>
     </header>
     <figure class="card__image">
-    {% capture logo_path %}assets/images/conferences/{{ conference.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
+    {% capture logo_path %}assets/cluster_images/conferences/{{ conference.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
     {% for image in site.static_files %}
         {% if image.path contains logo_path %}
             <img src="{{absolute.url}}{{image.path}}" alt ="{{ conference.name }}"/>
@@ -102,13 +102,13 @@ The Southeast is home to a variety of conferences that often feature the talent 
     <footer class="card__footer">
         <ul>
           {% if conference.online.twitter %}
-          <li><a href="https://twitter.com/{{ conference.online.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          <li><a href="https://twitter.com/{{ conference.online.twitter }}" target="_blank"><img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
           {% endif %}
           {% if conference.online.website %}
-          <li><a href="{{ conference.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
+          <li><a href="{{ conference.online.website }}" target="_blank"><img src="/assets/icons/icon-link.svg" class="icon icon-website"></a></li>
           {% endif %}
           {% if conference.location.address %}
-          <li data-toggle="tooltip" data-placement="bottom" title="{{conference.location.name}}"><a href="https://www.google.com/maps/place/{{ conference.location.address | url_encode }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location"></a></li>
+          <li data-toggle="tooltip" data-placement="bottom" title="{{conference.location.name}}"><a href="https://www.google.com/maps/place/{{ conference.location.address | url_encode }}" target="_blank"><img src="/assets/icons/icon-location.svg" class="icon icon-location"></a></li>
           {% endif %}
         </ul>
     </footer>
@@ -144,7 +144,7 @@ Knoxville is home to a variety of event spaces that provide a place to work - of
       <h3 id="{{ cowork_space.name | replace: " ", "_" | url_encode | downcase }}">{{cowork_space.name}}</h3>
     </header>
     <figure class="card__image">
-    {% capture logo_path %}assets/images/coworking_spaces/{{ cowork_space.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
+    {% capture logo_path %}assets/cluster_images/coworking_spaces/{{ cowork_space.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
     {% for image in site.static_files %}
         {% if image.path contains logo_path %}
             <img src="{{absolute.url}}{{image.path}}" alt ="{{ cowork_space.name }}"/>
@@ -157,13 +157,13 @@ Knoxville is home to a variety of event spaces that provide a place to work - of
   <footer class="card__footer">
       <ul>
           {% if cowork_space.online.twitter %}
-          <li><a href="https://twitter.com/{{ cowork_space.online.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          <li><a href="https://twitter.com/{{ cowork_space.online.twitter }}" target="_blank"><img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
           {% endif %}
           {% if cowork_space.online.website %}
-          <li><a href="{{ cowork_space.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
+          <li><a href="{{ cowork_space.online.website }}" target="_blank"><img src="/assets/icons/icon-link.svg" class="icon icon-website"></a></li>
           {% endif %}
           {% if cowork_space.location.address %}
-          <li data-toggle="tooltip" data-placement="bottom" title="{{cowork_space.location.name}}"><a href="https://www.google.com/maps/place/{{ cowork_space.location.address | url_encode }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location"></a></li>
+          <li data-toggle="tooltip" data-placement="bottom" title="{{cowork_space.location.name}}"><a href="https://www.google.com/maps/place/{{ cowork_space.location.address | url_encode }}" target="_blank"><img src="/assets/icons/icon-location.svg" class="icon icon-location"></a></li>
           {% endif %}
       </ul>
   </footer>
@@ -200,7 +200,7 @@ Knoxville is home to a variety of event spaces that provide a place to work - of
       <h3 id="{{ event_space.name | replace: " ", "_" | url_encode | downcase }}">{{event_space.name}}</h3>
     </header>
     <figure class="card__image">
-    {% capture logo_path %}assets/images/event_spaces/{{ event_space.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
+    {% capture logo_path %}assets/cluster_images/event_spaces/{{ event_space.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
     {% for image in site.static_files %}
         {% if image.path contains logo_path %}
             <img src="{{absolute.url}}{{image.path}}" alt ="{{ event_space.name }}"/>
@@ -213,13 +213,13 @@ Knoxville is home to a variety of event spaces that provide a place to work - of
   <footer class="card__footer">
       <ul>
           {% if event_space.online.twitter %}
-          <li><a href="https://twitter.com/{{ event_space.online.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          <li><a href="https://twitter.com/{{ event_space.online.twitter }}" target="_blank"><img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
           {% endif %}
           {% if event_space.online.website %}
-          <li><a href="http://{{ event_space.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
+          <li><a href="http://{{ event_space.online.website }}" target="_blank"><img src="/assets/icons/icon-link.svg" class="icon icon-website"></a></li>
           {% endif %}
           {% if event_space.location.address %}
-          <li data-toggle="tooltip" data-placement="bottom" title="{{event_space.location.name}}"><a href="https://www.google.com/maps/place/{{ event_space.location.address | url_encode }}" target="_blank"><img src="/assets/images/icons/icon-location.svg" class="icon icon-location"></a></li>
+          <li data-toggle="tooltip" data-placement="bottom" title="{{event_space.location.name}}"><a href="https://www.google.com/maps/place/{{ event_space.location.address | url_encode }}" target="_blank"><img src="/assets/icons/icon-location.svg" class="icon icon-location"></a></li>
           {% endif %}
       </ul>
   </footer>

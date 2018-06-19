@@ -1,6 +1,8 @@
 # KnoxDevs Website
 
-This repository is a collection of pages and data files that are used by Github Pages to build a `jekyll` site for KnoxDevs based on a template developed by [mmistakes](https://github.com/mmistakes/minimal-mistakes). 
+This repository is a collection of pages and data files that are used by Github Pages to build a `jekyll` site for KnoxDevs based on a template developed by [mmistakes](https://github.com/mmistakes/minimal-mistakes).
+
+The `_data` clusters and images for the corresponding clusters have been moved to a separate repository that is maintained separately for the [KnoxDevs Directory](https://github.com/KnoxDevs/directory.git). You will have to add the remotes upon cloning as described in the directions below.
 
 ## Want to contribute to this project?
 
@@ -8,9 +10,19 @@ Check out the [Contributing Guide](https://github.com/KnoxDevs/knoxdevs.github.i
 
 **TL;DR**
 1. [fork and clone the github repo](https://guides.github.com/activities/forking/)
-2. add your contribution to a new branch named `<username>/<feature-name>`
-3. [install jekyll](https://jekyllrb.com/docs/installation/) OR [run a one liner Docker command](https://github.com/KnoxDevs/knoxdevs.github.io/blob/master/Contributing.md#docker-image) and skip to 6.
-4. install jekyll project ruby dependencies `bundle install`
+2. Add the subtrees to the [KnoxDevs Directory](https://github.com/KnoxDevs/directory.git) and [KnoxDevs Directory Media](https://github.com/KnoxDevs/directory_images.git) repositories with the following commands:
+```bash
+git add remote -f directory https://github.com/KnoxDevs/directory.git
+git merge -s ours --no-commit --allow-unrelated-histories directory/master
+git pull -s subtree -Xsubtree=_data directory master
+
+git add remote -f directory_images https://github.com/KnoxDevs/directory.git
+git merge -s ours --no-commit --allow-unrelated-histories directory_images/master
+git pull -s subtree -Xsubtree=assets/cluster_images directory master
+```
+3. add your contribution to a new branch named `<username>/<feature-name>`
+4. [install jekyll](https://jekyllrb.com/docs/installation/) OR [run a one liner Docker command](https://github.com/KnoxDevs/knoxdevs.github.io/blob/master/Contributing.md#docker-image) and skip to 5.
+    - install jekyll ruby dependencies using `bundle install`
 5. serve locally `bundle exec jekyll serve`
 6. check that your addition is served properly
 7. submit a PR where the two or so files you are changing can easily

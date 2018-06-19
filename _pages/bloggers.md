@@ -39,7 +39,7 @@ Knoxville is home to a variety of software devs, many of whom also blog! Below i
       <h3 id="{{blogger.name | replace: " ", "_" | url_encode | downcase }}">{{blogger.name}}</h3>
     </header>
     <figure class="card__image">
-    {% capture image_path %}assets/images/bloggers/{{ blogger.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
+    {% capture image_path %}assets/cluster_images/bloggers/{{ blogger.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
     {% for image in site.static_files %}
         {% if image.path contains image_path %}
             <img src="{{absolute.url}}{{image.path}}" alt ="{{ blogger.name }}"/>
@@ -52,16 +52,16 @@ Knoxville is home to a variety of software devs, many of whom also blog! Below i
   <footer class="card__footer">
       <ul>
           {% if blogger.social.twitter %}
-          <li><a href="https://twitter.com/{{ blogger.social.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          <li><a href="https://twitter.com/{{ blogger.social.twitter }}" target="_blank"><img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
           {% endif %}
           {% if blogger.social.github %}
-          <li><a href="https://github.com/{{ blogger.social.github }}" target="_blank"><img src="/assets/images/icons/icon-github.svg" class="icon icon-github"></a></li>
+          <li><a href="https://github.com/{{ blogger.social.github }}" target="_blank"><img src="/assets/icons/icon-github.svg" class="icon icon-github"></a></li>
           {% endif %}
           {% if blogger.online.website %}
-          <li><a href="{{ blogger.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
+          <li><a href="{{ blogger.online.website }}" target="_blank"><img src="/assets/icons/icon-link.svg" class="icon icon-website"></a></li>
           {% endif %}
           {% if blogger.online.feed %}
-          <li><a href="{{ blogger.online.feed }}" target="_blank"><img src="/assets/images/icons/icon-rss.svg" class="icon icon-rss"></a></li>
+          <li><a href="{{ blogger.online.feed }}" target="_blank"><img src="/assets/icons/icon-rss.svg" class="icon icon-rss"></a></li>
           {% endif %}
       </ul>
   </footer>

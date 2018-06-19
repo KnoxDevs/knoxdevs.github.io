@@ -29,7 +29,7 @@
       <h3 id="{{organizer.name | replace: " ", "_" | url_encode | downcase }}">{{organizer.name}}</h3>
     </header>
     <figure class="card__image">
-    {% capture image_path %}assets/images/organizers/{{ organizer.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
+    {% capture image_path %}assets/cluster_images/organizers/{{ organizer.name | replace: " ", "_" | url_encode | downcase }}{% endcapture %}
     {% for image in site.static_files %}
         {% if image.path contains image_path %}
             <img src="{{absolute.url}}{{image.path}}" alt ="{{ organizer.name }}"/>
@@ -59,13 +59,13 @@
     {% endif %}
       <ul>
           {% if organizer.social.github %}
-          <li><a href="https://github.com/{{ organizer.social.github }}" target="_blank"><img src="/assets/images/icons/icon-github.svg" class="icon icon-github"></a></li>
+          <li><a href="https://github.com/{{ organizer.social.github }}" target="_blank"><img src="/assets/icons/icon-github.svg" class="icon icon-github"></a></li>
           {% endif %}
           {% if organizer.social.twitter %}
-          <li><a href="https://twitter.com/{{ organizer.social.twitter }}" target="_blank"><img src="/assets/images/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          <li><a href="https://twitter.com/{{ organizer.social.twitter }}" target="_blank"><img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
           {% endif %}
           {% if organizer.online.website %}
-          <li><a href="http://{{ organizer.online.website }}" target="_blank"><img src="/assets/images/icons/icon-link.svg" class="icon icon-website"></a></li>
+          <li><a href="http://{{ organizer.online.website }}" target="_blank"><img src="/assets/icons/icon-link.svg" class="icon icon-website"></a></li>
           {% endif %}
       </ul>
   </footer>
