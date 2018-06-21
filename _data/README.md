@@ -1,11 +1,11 @@
-# Data files for the website
+# KnoxDevs Directory
 
-This subfolder contains a collection of `.yml` files that make up the bulk of our website. They are files that contain basic information about each group, blogger, conference, organization, organizer, coworking spot, or event space that gives visitors to the KnoxDevs website, valuable tidbits that hopefully help to strengthen the community.
+This repository contains a collection of `.yml` files that make up the bulk of our website and our soon to be release API for all information about KnoxDevs groups. They are files that contain basic information about each group, blogger, conference, organization, organizer, coworking spot, or event space that gives visitors to the KnoxDevs website and potential future apps, valuable tidbits that hopefully help to strengthen the community.
 
-The structure of this subfolder is like so:
+The structure of this repo is like so:
 
 ```
-_data
+Directory
 ├── README.md
 ├── bloggers
 |   └── README.md # this is a template and explainer of how to add information to this dataset
@@ -17,4 +17,4 @@ _data
 ├── organizers
 ```
 
-This folder also includes `navigation.yml` and `ui-text.yml`, which are clever ways to make the navigation and support for multiple languages that the creator of this theme put together. Neat. `navigation.yml` may change if there are needs to add more links or change the order of links.
+If you would like a photo or logo to accompany your submission (e.g., blogger, group, conference, etc.), head over to the [repo](#) where we are storing logos and photos. There will be a format to the file naming that will be explained there (will match your submission's name).
