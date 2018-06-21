@@ -2,3 +2,15 @@ _site
 .sass-cache
 .jekyll-metadata
 .vscode/launch.json
+
+_data/\.github/
+
+_data/CODE_OF_CONDUCT\.md
+
+_data/Contributing\.md
+
+assets/cluster_images/\.github/
+
+assets/cluster_images/CODE_OF_CONDUCT\.md
+
+assets/cluster_images/Contributing\.md
