@@ -2,7 +2,7 @@
 
 This repository is a collection of pages and data files that are used by Github Pages to build a `jekyll` site for KnoxDevs based on a template developed by [mmistakes](https://github.com/mmistakes/minimal-mistakes).
 
-The `_data` clusters and images for the corresponding clusters have been moved to a separate repository that is maintained separately for the [KnoxDevs Directory](https://github.com/KnoxDevs/directory.git). You will have to add the remotes upon cloning as described in the directions below.
+The `_data` clusters and images for the corresponding clusters have been moved to a separate repository that is maintained separately for the [KnoxDevs Directory](https://github.com/KnoxDevs/directory) and the [Directory Images](https://github.com/KnoxDevs/directory_images). You will have to add the remotes upon cloning as described in the directions below.
 
 ## Want to contribute to this project?
 
@@ -10,25 +10,25 @@ Check out the [Contributing Guide](https://github.com/KnoxDevs/knoxdevs.github.i
 
 **TL;DR**
 1. [fork and clone the github repo](https://guides.github.com/activities/forking/)
-2. Add the subtrees to the [KnoxDevs Directory](https://github.com/KnoxDevs/directory.git) and [KnoxDevs Directory Media](https://github.com/KnoxDevs/directory_images.git) repositories with the following commands:
+2. Add the subtrees to the [KnoxDevs Directory](https://github.com/KnoxDevs/directory) and [KnoxDevs Directory Media](https://github.com/KnoxDevs/directory_images) repositories with the following commands:
 ```bash
-git add remote -f directory https://github.com/KnoxDevs/directory.git
+git remote add -f directory https://github.com/KnoxDevs/directory.git
 git merge -s ours --no-commit --allow-unrelated-histories directory/master
 git pull -s subtree -Xsubtree=_data directory master
 
-git add remote -f directory_images https://github.com/KnoxDevs/directory.git
+git remote add -f directory_images https://github.com/KnoxDevs/directory.git
 git merge -s ours --no-commit --allow-unrelated-histories directory_images/master
 git pull -s subtree -Xsubtree=assets/cluster_images directory master
 ```
 3. add your contribution to a new branch named `<username>/<feature-name>`
 4. [install jekyll](https://jekyllrb.com/docs/installation/) OR [run a one liner Docker command](https://github.com/KnoxDevs/knoxdevs.github.io/blob/master/Contributing.md#docker-image) and skip to 5.
     - install jekyll ruby dependencies using `bundle install`
-5. serve locally `bundle exec jekyll serve`
-6. check that your addition is served properly
-7. submit a PR where the two or so files you are changing can easily
+    - serve locally `bundle exec jekyll serve`
+5. check that your addition is served properly
+6. submit a PR where the two or so files you are changing can easily
    be seen. Some tips for good PRs are in that
    [guide](https://github.com/KnoxDevs/knoxdevs.github.io/blob/master/Contributing.md)
-8. profit. 
+7. profit. 
 
 ## Have an Issue or Request?
 
@@ -40,12 +40,15 @@ Here's the general structure:
 ```
 .
 ├── _config.yml
-├── _data
-├── _layouts
-├── _pages
-├── .forestry
-├── .migrations
-├── assets
+├── _data/ **actually a subtree of the KnoxDevs Directory**
+├── _layouts/
+├── _pages/
+├── .forestry/
+├── .migrations/
+├── assets/
+    ├── cluster_images/  **actually a subtree of the KnoxDevs Directory Images**
+    ├── icons/
+    └── images/
 └── index.md
 ```
 
@@ -53,7 +56,7 @@ By using `remote_theme` in `_config.yml`, we avoid cluttering this repository wi
 
 ### _data folder
 
-This folder contains all of the data (stored in `.yml` files) associated with bloggers, groups, organizers, and much more. There is a README file there to explain more.
+This folder contains all of the clusters (stored in `.yml` files) associated with bloggers, groups, organizers, and much more. This folder is actually a subtree from a separate repository. If you want to make a change to one of the cluster subsets, please do so at the [KnoxDevs Directory](https://github.com/KnoxDevs/directory) repository.
 
 ### _layouts folder
 
@@ -73,9 +76,19 @@ Previously, the knoxdevs.com website used `json` files to represent data like bl
 
 ### assets folder
 
-This folder contains all of the images (and potentially javascript files for future extension of this website) used by the website for logos, icons, and headshots. There is a README to explain the inner ordering structure that mirrors the `_data` folder.
+```
+.
+├── assets/
+    ├── cluster_images/
+    ├── icons/
+    └── images/
+```
 
-Notice that this folder _does not_ have a `_` preceding the name. This folder is publically accessible from the website.
+This folder contains all of the images (and potentially javascript files for future extension of this website) used by the website for logos, icons, and headshots. There is a subfolder labeled `cluster_images` that is actually a subtree of a separate repository. Go to the [KnoxDevs Directory Images](https://github.com/KnoxDevs/directory_images) repository to see the inner ordering structure that mirrors the `_data` folder.
+
+Icons and images related to sponsors and the main page header
+
+Note that this folder _does not_ have a `_` preceding the name. This folder is publically accessible from the website.
 
 ### api folder
 
