@@ -16,8 +16,12 @@ excerpt: KnoxDevs is a registered non-profit organization whose sole mission is 
 
 # Proudly Supported by:
 
-<a href="http://www.premierstaffingpartners.com/" target="_blank"><img src="/assets/images/sponsors/premier_staffing.jpg" alt="Premier Staffing" style="width:20em" /></a>
-
+<a href="http://www.premierstaffingpartners.com/" target="_blank">
+    <img src="/assets/images/sponsors/premier_staffing.jpg" alt="Premier Staffing" style="width:20em" />
+</a>
+<section id="contact_krisann" markdown="1" style="width:20em; .figcaption font-size: 1em; font-family:-apple-system,BlinkMacSystemFont,'Roboto','Segoe UI','Helvetica Neue','Lucida Grande',Arial,sans-serif">
+Connect with Kris Ann from Premier Staffing via [email](mailto:krisann@premierstaffingpartners.com) or on slack [@krisann](https://knoxdevs.slack.com/messages/@krisann/) for all of your technical recruiting needs.
+</section>
 ## June Event support from:
 
 <div id="row">
@@ -33,11 +37,10 @@ excerpt: KnoxDevs is a registered non-profit organization whose sole mission is 
 
 ## Join us on Slack!
 
-[Join our slack team](http://knoxdevs-slackin.herokuapp.com/) to get connected with the greater software community in Knoxville!
-
-<iframe src="http://knoxdevs-slackin.herokuapp.com/iframe?large" class="__slackin" style="border-width: 0px; width: 161px; height: 30px; visibility: visible;"></iframe>
+[Join our slack team](https://knoxdevs-slackin.herokuapp.com/) to get connected with the greater software community in Knoxville!
 
 <br/>
+
 
 <h2 id="Events">Events</h2>
 

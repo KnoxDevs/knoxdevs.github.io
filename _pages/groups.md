@@ -96,6 +96,6 @@ Knoxville is home to a variety of groups that cater to the robust software devel
 <hr />
 
 <section id="update_the_list" markdown="1">
-Are you an existing group organizer or don't see your group here? Send a Pull Request to add your group listing. You can see the template for groups [here]({{ site.github.repository_url }}/tree/master/{{ page.relative_path }}_data/groups).
+Are you an existing group organizer or don't see your group here? Send a Pull Request to add your group listing. You can see the template for groups [here](https://github.com/KnoxDevs/directory/tree/master/groups).
 
 </section>

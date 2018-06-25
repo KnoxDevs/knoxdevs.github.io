@@ -64,7 +64,7 @@ Knoxville is home to a variety of organizations that help support local software
 <hr />
 
 <section id="update_the_list_organizations" markdown="1">
-Are you (or do you work for) a local organization that employs local software developers and would like to be involved in Knoxville' software developer community? Or You can update the listing here by sending a Pull Request to the individual markdown file [here]({{ site.github.repository_url }}/tree/master/{{ page.relative_path }}_data/organizations).
+Are you (or do you work for) a local organization that employs local software developers and would like to be involved in Knoxville' software developer community? Or You can update the listing here by sending a Pull Request to the individual markdown file [here](https://github.com/KnoxDevs/directory/tree/master/organizations).
 </section>
 
 <h2 id="conferences">Conferences</h2>
@@ -119,7 +119,7 @@ The Southeast is home to a variety of conferences that often feature the talent 
 <hr />
 
 <section id="update_the_list_conferences" markdown="1">
-Are you (or do you attend) a regional conference that you feel developers in Knoxville would be interested in attending? You can update the listing here by sending a Pull Request to the individual markdown file [here]({{ site.github.repository_url }}/tree/master/{{ page.relative_path }}_data/conferences).
+Are you (or do you attend) a regional conference that you feel developers in Knoxville would be interested in attending? You can update the listing here by sending a Pull Request to the individual markdown file [here](https://github.com/KnoxDevs/directory/tree/master/conferences).
 </section>
 
 <h2 id="coworking_spaces">Coworking Spaces</h2>
@@ -174,7 +174,7 @@ Knoxville is home to a variety of event spaces that provide a place to work - of
 <hr />
 
 <section id="update_the_list_event" markdown="1">
-Are you a local event space (or do you regularly work at one) that provides a event locations for local software developers and would like to be involved in Knoxville' software developer community? You can update the listing here by sending a Pull Request to the individual markdown file [here]({{ site.github.repository_url }}/tree/master/{{ page.relative_path }}_data/coworking_spaces).
+Are you a local event space (or do you regularly work at one) that provides a event locations for local software developers and would like to be involved in Knoxville' software developer community? You can update the listing here by sending a Pull Request to the individual markdown file [here](https://github.com/KnoxDevs/directory/tree/master/coworking_spaces).
 
 </section>
 
@@ -230,6 +230,6 @@ Knoxville is home to a variety of event spaces that provide a place to work - of
 <hr />
 
 <section id="update_the_list_event" markdown="1">
-Are you a local event space (or do you regularly use one) that provides an event location for local software developers and would like to be involved in Knoxville's software developer community? You can update the listing here by sending a Pull Request to the individual markdown file [here]({{ site.github.repository_url }}/tree/master/{{ page.relative_path }}_data/event_spaces).
+Are you a local event space (or do you regularly use one) that provides an event location for local software developers and would like to be involved in Knoxville's software developer community? You can update the listing here by sending a Pull Request to the individual markdown file [here](https://github.com/KnoxDevs/directory/tree/master/event_spaces).
 
 </section>

@@ -72,8 +72,5 @@ Knoxville is home to a variety of software devs, many of whom also blog! Below i
 <hr />
 
 <section id="update_the_list" markdown="1">
-Are you a local dev that would like to be featured here? You can update the listing here by sending a Pull Request with an individual markdown file [here](#). Follow the template and send the request!
-
-Do you know of a blog that should be listed here? Send a Pull Request to add them! You can see the template for bloggers bloggers [here](#).
-
+Are you a local dev that would like to be featured here? Send a Pull Request to add your blog. You can see the template for groups [here](https://github.com/KnoxDevs/directory/tree/master/bloggers).
 </section>
