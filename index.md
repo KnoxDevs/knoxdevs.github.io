@@ -20,7 +20,7 @@ excerpt: KnoxDevs is a registered non-profit organization whose sole mission is 
     <img src="/assets/images/sponsors/premier_staffing.jpg" alt="Premier Staffing" style="width:20em" />
 </a>
 <section id="contact_krisann" markdown="1" style="width:20em; .figcaption font-size: 1em; font-family:-apple-system,BlinkMacSystemFont,'Roboto','Segoe UI','Helvetica Neue','Lucida Grande',Arial,sans-serif">
-Connect with Kris Ann from Premier Staffing via [email](mailto:krisann@premierstaffingpartners.com) or on slack [@krisann](https://knoxdevs.slack.com/messages/@krisann/) for all of your technical recruiting needs.
+Connect with Kris Ann Hawkins from Premier Staffing via [email](mailto:krisann@premierstaffingpartners.com) or on slack [@krisann](https://knoxdevs.slack.com/messages/@krisann/) for all of your technical recruiting needs.
 </section>
 ## June Event support from:
 
