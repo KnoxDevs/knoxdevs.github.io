@@ -18,7 +18,7 @@ git pull -s subtree -Xsubtree=_data directory master
 
 git remote add -f directory_images https://github.com/KnoxDevs/directory.git
 git merge -s ours --no-commit --allow-unrelated-histories directory_images/master
-git pull -s subtree -Xsubtree=assets/cluster_images directory master
+git pull -s subtree -Xsubtree=assets/cluster_images directory_images master
 ```
 3. add your contribution to a new branch named `<username>/<feature-name>`
 4. [install jekyll](https://jekyllrb.com/docs/installation/) OR [run a one liner Docker command](https://github.com/KnoxDevs/knoxdevs.github.io/blob/master/Contributing.md#docker-image) and skip to 5.
