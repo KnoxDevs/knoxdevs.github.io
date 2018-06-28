@@ -46,8 +46,11 @@ Knoxville is home to a variety of organizations that help support local software
     </main>  
     <footer class="card__footer">
       <ul>
-          {% if organization.online.twitter %}
+          {% if organization.social.twitter %}
           <li><a href="https://twitter.com/{{ organization.social.twitter }}" target="_blank"><img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          {% endif %}
+          {% if organization.social.facebook %}
+          <li><a href="https://facebook.com/{{ organization.social.facebook }}" target="_blank"><img src="/assets/icons/icon-fb.svg" class="icon icon-fb"></a></li>
           {% endif %}
           {% if organization.online.website %}
           <li><a href="{{ organization.online.website }}" target="_blank"><img src="/assets/icons/icon-link.svg" class="icon icon-website"></a></li>
@@ -101,8 +104,11 @@ The Southeast is home to a variety of conferences that often feature the talent 
     </main>  
     <footer class="card__footer">
         <ul>
-          {% if conference.online.twitter %}
-          <li><a href="https://twitter.com/{{ conference.online.twitter }}" target="_blank"><img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          {% if conference.social.twitter %}
+          <li><a href="https://twitter.com/{{ conference.social.twitter }}" target="_blank"><img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          {% endif %}
+          {% if conference.social.facebook %}
+          <li><a href="https://facebook.com/{{ conference.social.facebook }}" target="_blank"><img src="/assets/icons/icon-fb.svg" class="icon icon-fb"></a></li>
           {% endif %}
           {% if conference.online.website %}
           <li><a href="{{ conference.online.website }}" target="_blank"><img src="/assets/icons/icon-link.svg" class="icon icon-website"></a></li>
@@ -156,8 +162,11 @@ Knoxville is home to a variety of event spaces that provide a place to work - of
     </main>  
   <footer class="card__footer">
       <ul>
-          {% if cowork_space.online.twitter %}
-          <li><a href="https://twitter.com/{{ cowork_space.online.twitter }}" target="_blank"><img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          {% if cowork_space.social.twitter %}
+          <li><a href="https://twitter.com/{{ cowork_space.social.twitter }}" target="_blank"><img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          {% endif %}
+          {% if cowork_space.social.facebook %}
+          <li><a href="https://facebook.com/{{ cowork_space.social.facebook }}" target="_blank"><img src="/assets/icons/icon-fb.svg" class="icon icon-fb"></a></li>
           {% endif %}
           {% if cowork_space.online.website %}
           <li><a href="{{ cowork_space.online.website }}" target="_blank"><img src="/assets/icons/icon-link.svg" class="icon icon-website"></a></li>
@@ -212,8 +221,11 @@ Knoxville is home to a variety of event spaces that provide a place to work - of
     </main>  
   <footer class="card__footer">
       <ul>
-          {% if event_space.online.twitter %}
-          <li><a href="https://twitter.com/{{ event_space.online.twitter }}" target="_blank"><img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          {% if event_space.social.twitter %}
+          <li><a href="https://twitter.com/{{ event_space.social.twitter }}" target="_blank"><img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter"></a></li>
+          {% endif %}
+          {% if event_space.organization.facebook %}
+          <li><a href="https://facebook.com/{{ event_space.social.facebook }}" target="_blank"><img src="/assets/icons/icon-fb.svg" class="icon icon-fb"></a></li>
           {% endif %}
           {% if event_space.online.website %}
           <li><a href="http://{{ event_space.online.website }}" target="_blank"><img src="/assets/icons/icon-link.svg" class="icon icon-website"></a></li>
