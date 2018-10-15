@@ -22,17 +22,16 @@ excerpt: KnoxDevs is a registered non-profit organization whose sole mission is 
 <section id="contact_krisann" markdown="1" style="width:20em; .figcaption font-size: 1em; font-family:-apple-system,BlinkMacSystemFont,'Roboto','Segoe UI','Helvetica Neue','Lucida Grande',Arial,sans-serif">
 Connect with Kris Ann Hawkins from Premier Staffing via [email](mailto:krisann@premierstaffingpartners.com) or on slack [@krisann](https://knoxdevs.slack.com/messages/@krisann/) for all of your technical recruiting needs.
 </section>
-## June Event support from:
+
+Sign up to attend our next Quarterly - Tech or Treat Nov 1st from 6 - 8 at Schulz Bräu Brewing, with a spooky hack LIVE from Jared Smith. [Register here].(https://www.meetup.com/KnoxDevs/events/255233539/)
+
+
+## Tech or Treat support from:
 
 <div id="row">
-<a href="http://www.resultstack.com/" target="_blank"><img src="/assets/images/sponsors/result_stack.png" alt="Result Stack" style="width:15em" /></a>
+<a href="https://lirio.co/" target="_blank"><img src="/assets/images/sponsors/lirio.png" alt="Lirio" style="width:15em" /></a>
 </div>
 
-<div id="row">
-<a href="http://avrioanalytics.com/" target="_blank"><img src="/assets/images/sponsors/avrio_analytics.png" alt="Avrio Analytics" style="width:15em" /></a>
-
-<a href="https://www.cirrusinsight.com/" target="_blank"><img src="/assets/images/sponsors/cirrus_insight.png" alt="Cirrus Insight" style="width:15em" /></a>
-</div>
 <br/>
 
 ## Join us on Slack!
