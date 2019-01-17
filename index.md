@@ -24,16 +24,10 @@ Connect with Kris Ann Hawkins from Premier Staffing via [email](mailto:krisann@p
 </section>
 
 
-## Tech or Treat
+## Knoxville City Hackathon
 
-Sign up to attend our next Quarterly - Tech or Treat Nov 1st from 6 - 8 at Schulz Bräu Brewing, with a spooky hack LIVE from Jared Smith. [Register here](https://www.meetup.com/KnoxDevs/events/255233539/)
+In a collaboration with the Knoxville Entrepreneur Center, we are putting together the inaugural Knoxville City Hackathon March 2 - 3. In 28 hours of hacking, we're looking for 100 of you all to join us at Pyxl for a civic-minded hackathon. Local companies are being sollicited for app / project ideas to complement a collection of datasets and challenges that various departments in the City of Knoxville are providing. For more details and how to register head on over to our [hackathon website](https://knxhx.org/)!
 
-
-### with support from:
-
-<div id="row">
-<a href="https://lirio.co/" target="_blank"><img src="/assets/images/sponsors/lirio.png" alt="Lirio" style="max-width:10em" /></a>
-</div>
 
 <br/>
 
