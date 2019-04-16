@@ -23,12 +23,6 @@ excerpt: KnoxDevs is a registered non-profit organization whose sole mission is 
 Connect with Kris Ann Hawkins from Premier Staffing via [email](mailto:krisann@premierstaffingpartners.com) or on slack [@krisann](https://knoxdevs.slack.com/messages/@krisann/) for all of your technical recruiting needs.
 </section>
 
-
-## Knoxville City Hackathon
-
-In a collaboration with the Knoxville Entrepreneur Center, we are putting together the inaugural Knoxville City Hackathon March 2 - 3. In 28 hours of hacking, we're looking for 100 of you all to join us at Pyxl for a civic-minded hackathon. Local companies are being sollicited for app / project ideas to complement a collection of datasets and challenges that various departments in the City of Knoxville are providing. For more details and how to register head on over to our [hackathon website](https://knxhx.org/)!
-
-
 <br/>
 
 ## Join us on Slack!
