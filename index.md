@@ -14,10 +14,19 @@ excerpt: KnoxDevs is a registered non-profit organization whose sole mission is 
 
 {% include feature_row id="intro" type="center" %}
 
-# Proudly Supported by:
+# Come out to our next Quarterly!
+
+<a href="https://www.meetup.com/KnoxDevs/events/262658807/" target="_blank">
+    <img src="/assets/images/quarterly_announcement_july_2019.png" alt="KnoxDevs Quarterly July 18" style="max-width:20em" />
+</a>
+<section id="quarterly" markdown="1">
+Come on out to our next Quarterly, July 18th 7 - 9 at the Central Collective. Click above to RSVP.
+</section>
+
+# Proudly Supported by
 
 <a href="http://www.premierstaffingpartners.com/" target="_blank">
-    <img src="/assets/images/sponsors/premier_staffing.jpg" alt="Premier Staffing" style="max-width:20em" />
+    <img src="/assets/images/sponsors/premier_staffing.jpg" alt="Premier Staffing" style="max-width:30em" />
 </a>
 <section id="contact_krisann" markdown="1" style=".figcaption font-size: 1em; font-family:-apple-system,BlinkMacSystemFont,'Roboto','Segoe UI','Helvetica Neue','Lucida Grande',Arial,sans-serif">
 Connect with Kris Ann Hawkins from Premier Staffing via [email](mailto:krisann@premierstaffingpartners.com) or on slack [@krisann](https://knoxdevs.slack.com/messages/@krisann/) for all of your technical recruiting needs.

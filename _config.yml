@@ -98,7 +98,7 @@ analytics:
 # Site Author
 author:
   name             : "KnoxDevs"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/knoxdevs.svg"
   bio              : "A nonprofit umbrella organization of groups that connects and supports software developers in Knoxville, TN"
   location         : "Knoxville, TN"
   email            :
@@ -126,7 +126,7 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          : "https://www.youtube.com/channel/UCkRNGdSNWUL02dcAHdkYtBA" # "https://youtube.com/c/MichaelRoseDesign"
+  youtube          : "https://www.youtube.com/c/knoxdevs" # "https://youtube.com/c/MichaelRoseDesign"
 
 
 # Reading Files
