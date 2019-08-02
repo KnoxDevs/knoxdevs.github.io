@@ -11,7 +11,9 @@ Knoxville is home to a variety of groups that cater to the robust software devel
 <!-- Ensure that groups are sorted alphabetically, not based on file name in `_data` folder -->
 {%- capture group_name -%}
     {%- for groups_array in site.data.groups -%}
+        {%- if groups_array[1].name != "template" -%}
        {{ groups_array[1] | map: 'name'}} |
+        {%- endif -%}
     {%- endfor -%}
 {%- endcapture -%}
 {% assign sorted_groupname = group_name | split: ' |' | sort_natural %}
@@ -55,28 +57,28 @@ Knoxville is home to a variety of groups that cater to the robust software devel
         </code>
         {% endif %}
         <ul>
-            {% if group.social.github %}
+            {% if group.links.github %}
             <li>
-                <a href="https://github.com/{{ group.social.github }}" target="_blank"><img src="/assets/icons/icon-github.svg" class="icon icon-github"></a>
+                <a href="https://github.com/{{ group.links.github }}" target="_blank"><img src="/assets/icons/icon-github.svg" class="icon icon-github"></a>
             </li>
             {% endif %}
-            {% if group.social.meetup %}
+            {% if group.links.meetup %}
             <li>
-                <a href="https://meetup.com/{{ group.social.meetup }}" target="_blank">
+                <a href="https://meetup.com/{{ group.links.meetup }}" target="_blank">
                     <img src="/assets/icons/icon-meetup.svg" class="icon icon-meetup">
                 </a>
             </li>
             {% endif %}
-            {% if group.social.twitter %}
+            {% if group.links.twitter %}
             <li>
-                <a href="https://twitter.com/{{ group.social.twitter }}" target="_blank">
+                <a href="https://twitter.com/{{ group.links.twitter }}" target="_blank">
                     <img src="/assets/icons/icon-twitter.svg" class="icon icon-twitter">
                 </a>
             </li>
             {% endif %}
-            {% if group.online.website %}
+            {% if group.links.website %}
             <li>
-                <a href="{{ group.online.website }}" target="_blank">
+                <a href="{{ group.links.website }}" target="_blank">
                 <img src="/assets/icons/icon-link.svg" class="icon icon-website">
                 </a>
             </li>
