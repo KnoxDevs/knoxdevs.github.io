@@ -14,14 +14,7 @@ excerpt: KnoxDevs is a registered non-profit organization whose sole mission is 
 
 {% include feature_row id="intro" type="center" %}
 
-# Come out to our next Quarterly!
-
-<a href="https://www.meetup.com/KnoxDevs/events/262658807/" target="_blank">
-    <img src="/assets/images/quarterly_announcement_july_2019.png" alt="KnoxDevs Quarterly July 18" style="max-width:20em" />
-</a>
-<section id="quarterly" markdown="1">
-Come on out to our next Quarterly, July 18th 7 - 9 at the Central Collective. Click above to RSVP.
-</section>
+Stay tuned for an announcement for our next Quarterly in late September.
 
 # Proudly Supported by
 
