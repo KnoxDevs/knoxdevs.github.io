@@ -1,7 +1,9 @@
 <!-- Get just the last name followed by the full name so that we can sort by last name, which is typically how sorting is done-->
 {%- capture organizer_lastname_name -%}
     {%- for organizers_array in site.data.organizers -%}
-       {{ organizers_array[1] | map: 'name' | split: ' ' | last | remove: '"]' | escape }}, {{ organizers_array[1] | map: 'name'}} |
+        {%- if organizers_array[1].name != "template" -%}
+            {{ organizers_array[1] | map: 'name' | split: ' ' | last | remove: '"]' | escape }}, {{ organizers_array[1] | map: 'name'}} |
+        {%- endif -%}
     {%- endfor -%}
 {%- endcapture -%}
 {% assign sorted_lastname_name = organizer_lastname_name | split: ' |' | sort_natural %}
