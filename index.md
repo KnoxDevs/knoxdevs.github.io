@@ -14,8 +14,6 @@ excerpt: KnoxDevs is a registered non-profit organization whose sole mission is 
 
 {% include feature_row id="intro" type="center" %}
 
-Stay tuned for an announcement for our next Quarterly in late September.
-
 # Proudly Supported by
 
 <a href="http://www.premierstaffingpartners.com/" target="_blank">
