@@ -1,9 +1,13 @@
-name: The Knoxville Microsoft Azure Users Group
+name: Knoxville Microsoft Azure Users Group
 
 description: >
-    Microsoft Azure is one of the largest cloud offerings and has a lot to offer for system administrators, developers,and users. This user group is to learn from local businesses and individuals using Azure, to tell how Azure is being used, to ask questions of a group, and to show off neat projects!
+    Microsoft Azure is one of the largest cloud offerings for sysadmins, developers, and users. The group's purpose is to learn from local businesses and individuals using Azure, to tell how Azure is being used, to ask questions of a group, and to show off neat projects.
 
 links:
+    website:
+    email:
+    github:
+    twitter:
     meetup: The-Knoxville-Microsoft-Azure-Users-Group
 
 slack_channel: azure
