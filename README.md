@@ -6,7 +6,9 @@ The `_data` clusters and images for the corresponding clusters have been moved t
 
 ## Want to contribute to this project?
 
-Check out the [Contributing Guide](https://github.com/KnoxDevs/knoxdevs.github.io/blob/master/Contributing.md)
+Check out the [Contributing Guide](https://github.com/KnoxDevs/knoxdevs.github.io/blob/master/Contributing.md).
+
+Note that if you want to add information about yourself as a blogger or organizer (or wish to add other information to the directory, such as information about a conference), head over to the [directory repository](https://github.com/KnoxDevs/directory).
 
 **TL;DR**
 1. [fork and clone the github repo](https://guides.github.com/activities/forking/)
