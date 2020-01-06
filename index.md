@@ -14,6 +14,10 @@ excerpt: KnoxDevs is a registered non-profit 501(c)(3) whose sole mission is to 
 
 {% include feature_row id="intro" type="center" %}
 
+## January Quarterly - Pecha Kucha Style
+
+Join us Wednesday January 29th at 6:15 at the Open Chord in West Knoxville for a fun night of short presentations with some heavy hitters of the software developer scene in the Knoxville region. Free appetizers will be served, with a chance to catch up with other KnoxDevs irl. For more details visit our [Meetup event](https://www.meetup.com/KnoxDevs/events/267601030/).
+
 ## Internship Program
 
 <section id="internship" markdown="1" style=".figcaption font-size: 1em; font-family:-apple-system,BlinkMacSystemFont,'Roboto','Segoe UI','Helvetica Neue','Lucida Grande',Arial,sans-serif">
