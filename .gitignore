@@ -14,3 +14,4 @@ assets/cluster_images/\.github/
 assets/cluster_images/CODE_OF_CONDUCT\.md
 
 assets/cluster_images/Contributing\.md
+Gemfile.lock
