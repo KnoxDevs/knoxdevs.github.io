@@ -14,14 +14,17 @@ excerpt: KnoxDevs is a registered non-profit 501(c)(3) whose sole mission is to 
 
 {% include feature_row id="intro" type="center" %}
 
+<img src="assets/images/2020-01-quarterly-announcement.png" alt="Premier Staffing" style="max-width:30em"
+/>
+
 ## January Quarterly - Pecha Kucha Style
 
-Join us Wednesday January 29th at 6:15 at the Open Chord in West Knoxville for a fun night of short presentations with some heavy hitters of the software developer scene in the Knoxville region. Free appetizers will be served, with a chance to catch up with other KnoxDevs irl. For more details visit our [Meetup event](https://www.meetup.com/KnoxDevs/events/267601030/).
+Join us Wednesday January 29th at 6:15 at the [Open Chord](https://goo.gl/maps/mQuscaLKxPSdcn7L7) in West Knoxville for a fun night of short presentations with some heavy hitters of the software developer scene in the Knoxville region. Free appetizers will be served, with a chance to catch up with other KnoxDevs irl. For more details visit our [Meetup event](https://www.meetup.com/KnoxDevs/events/267601030/).
 
 ## Internship Program
 
 <section id="internship" markdown="1" style=".figcaption font-size: 1em; font-family:-apple-system,BlinkMacSystemFont,'Roboto','Segoe UI','Helvetica Neue','Lucida Grande',Arial,sans-serif">
-KnoxDevs is hosting an internship program with the Knoxvile Entrepreneur Center for Spring 2020. For details on how to donate to the program, apply to be an intern, or host an intern, visit the [internship page](http://knoxec.com/about-us/internships/kec-knoxdevs-internship-program/) for more information.
+KnoxDevs is hosting an internship program with the Knoxvile Entrepreneur Center for Spring 2020. Applications to be an intern are due **January 31st.** For details on how to donate to the program, apply to be an intern, or host an intern, visit the [internship page](http://knoxec.com/about-us/internships/kec-knoxdevs-internship-program/) for more information.
 </section>
 
 ## Donate on Amazon Smile
@@ -47,4 +50,4 @@ Connect with Kris Ann Hawkins from Premier Staffing via [email](mailto:krisann@p
 
 <h2 id="Events">Events</h2>
 
-<iframe src="https://calendar.google.com/calendar/b/1/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=support%25knoxdevs.com%40gtempaccount.com&amp;color=%231B887A&amp;ctz=America%2FNew_York" style="border-width:0" width="100%" max-width = "700" height="500" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/b/1/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=knoxdevs.com_qtbron4cnhfvur8n0f5g80oo18@group.calendar.google.com&amp;color=%231B887A&amp;ctz=America%2FNew_York" style="border-width:0" width="100%" max-width = "700" height="500" frameborder="0" scrolling="no"></iframe>
