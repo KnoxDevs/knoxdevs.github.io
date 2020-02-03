@@ -18,7 +18,7 @@ git remote add -f directory https://github.com/KnoxDevs/directory.git
 git merge -s ours --no-commit --allow-unrelated-histories directory/master
 git pull -s subtree -Xsubtree=_data directory master
 
-git remote add -f directory_images https://github.com/KnoxDevs/directory.git
+git remote add -f directory_images https://github.com/KnoxDevs/directory_images.git
 git merge -s ours --no-commit --allow-unrelated-histories directory_images/master
 git pull -s subtree -Xsubtree=assets/cluster_images directory_images master
 ```
