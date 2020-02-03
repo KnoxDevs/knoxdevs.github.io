@@ -14,18 +14,6 @@ excerpt: KnoxDevs is a registered non-profit 501(c)(3) whose sole mission is to 
 
 {% include feature_row id="intro" type="center" %}
 
-<img src="assets/images/2020-01-quarterly-announcement.png" alt="Premier Staffing" style="max-width:30em"
-/>
-
-## January Quarterly - Pecha Kucha Style
-
-Join us Wednesday January 29th at 6:15 at the [Open Chord](https://goo.gl/maps/mQuscaLKxPSdcn7L7) in West Knoxville for a fun night of short presentations with some heavy hitters of the software developer scene in the Knoxville region. Free appetizers will be served, with a chance to catch up with other KnoxDevs irl. For more details visit our [Meetup event](https://www.meetup.com/KnoxDevs/events/267601030/).
-
-## Internship Program
-
-<section id="internship" markdown="1" style=".figcaption font-size: 1em; font-family:-apple-system,BlinkMacSystemFont,'Roboto','Segoe UI','Helvetica Neue','Lucida Grande',Arial,sans-serif">
-KnoxDevs is hosting an internship program with the Knoxvile Entrepreneur Center for Spring 2020. Applications to be an intern are due **January 31st.** For details on how to donate to the program, apply to be an intern, or host an intern, visit the [internship page](http://knoxec.com/about-us/internships/kec-knoxdevs-internship-program/) for more information.
-</section>
 
 ## Donate on Amazon Smile
 
