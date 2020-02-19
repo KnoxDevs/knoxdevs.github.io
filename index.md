@@ -31,7 +31,29 @@ Connect with Kris Ann Hawkins from Premier Staffing via [email](mailto:krisann@p
 
 ## Join us on Slack!
 
-[Join our slack team](https://knoxdevs-slackin.herokuapp.com/) to get connected with the greater software community in Knoxville!
+<div class="w3-container">
+<button onclick="document.getElementById('id01').style.display='block'" class="w3-button kd-radicalred">Click to Join Our Slack</button>
+
+<div id="id01" class="w3-modal">
+<div class="w3-modal-content w3-animate-zoom w3-card-4">
+<header class="w3-container w3-teal"> 
+<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-display-topright" title="Close Modal">&times;</span>
+<h2>Terms and Conditions</h2>
+</header>
+<div class="w3-container modal-body">
+<br/>
+<div markdown="1">
+By registering for an account on our Slack team, you agree to abide by our Code of Conduct, reproduced below:
+{% include_relative _pages/code_of_conduct.md %}
+</div>
+<a class="w3-button kd-wsmoke" href="https://knoxdevs-slackin.herokuapp.com/">Click to Join Our Slack</a>
+</div>
+<footer class="w3-container">
+<h3></h3>
+</footer>
+</div>
+</div>
+</div>
 
 <br/>
 
