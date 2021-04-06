@@ -30,7 +30,7 @@ Connect with Kris Ann Hawkins from Premier Staffing via [email](mailto:krisann@p
 
 ## Join us on Discord
 
-<a class="w3-button kd-radicalred" href="https://discord.gg/fvrrhQ3">Click to Join Our Discord</a>
+<a class="w3-button kd-radicalred" href="https://discord.gg/TMNSt3KuUS">Click to Join Our Discord</a>
 <br>
 
 ## Join us on Slack!
