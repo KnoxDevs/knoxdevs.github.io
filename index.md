@@ -28,11 +28,6 @@ excerpt: KnoxDevs is a registered non-profit 501(c)(3) whose sole mission is to 
 Connect with Kris Ann Hawkins from Premier Staffing via [email](mailto:krisann@premierstaffingpartners.com) or on slack [@krisann](https://knoxdevs.slack.com/messages/@krisann/) for all of your technical recruiting needs.
 </section>
 
-## Join us on Discord
-
-<a class="w3-button kd-radicalred" href="https://discord.gg/TMNSt3KuUS">Click to Join Our Discord</a>
-<br>
-
 ## Join us on Slack!
 
 <div class="w3-container">
@@ -59,7 +54,12 @@ By registering for an account on our Slack team, you agree to abide by our Code 
 </div>
 </div>
 
-<br/>
+<br>
+
+## Join us on Discord
+
+<a class="w3-button kd-radicalred" href="https://discord.gg/TMNSt3KuUS">Click to Join Our Discord</a>
+<br>
 
 
 <h2 id="Events">Events</h2>
