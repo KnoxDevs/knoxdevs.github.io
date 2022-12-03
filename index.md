@@ -45,7 +45,7 @@ Connect with Kris Ann Hawkins from Premier Staffing via [email](mailto:krisann@p
 By registering for an account on our Slack team, you agree to abide by our Code of Conduct, reproduced below:
 {% include_relative _pages/code_of_conduct.md %}
 </div>
-<a class="w3-button kd-wsmoke" href="https://knoxdevs-slackin.herokuapp.com/">Click to Join Our Slack</a>
+<a class="w3-button kd-wsmoke" href="https://forms.gle/zD9Jr2eXHdr4ZsW76">Click to Join Our Slack</a>
 </div>
 <footer class="w3-container">
 <h3></h3>
@@ -55,12 +55,6 @@ By registering for an account on our Slack team, you agree to abide by our Code 
 </div>
 
 <br>
-
-## Join us on Discord
-
-<a class="w3-button kd-radicalred" href="https://discord.gg/TMNSt3KuUS">Click to Join Our Discord</a>
-<br>
-
 
 <h2 id="Events">Events</h2>
 
