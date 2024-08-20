@@ -6,7 +6,8 @@ Info we're looking for. You can leave any field but name and group blank if you 
 
 - **Name**
 - **Group(s)** that you organize
-- Online links, website and/or twitter
+- Online links, website 
+- Social links, github, twitter, etc.
 - Blurb, capped at 50 words (forreal)
 
 ````yaml
