@@ -1,0 +1,23 @@
+name: KnoxPy #Name of organization
+image: knoxpy.jpg
+
+description: >
+    Calling all Python users in Knoxville, this is a group for anyone interested in the
+    `Python` programming language. During our monthly meetings, intermediate and advanced
+    users share how they use the language and help beginners get started. Meetings are very
+    informal and open to everyone.
+
+links: #Online links
+    website: http://knoxpy.org
+    email: info@knoxpy.org
+    github: knoxpy
+    twitter: knoxpytn
+    meetup:
+
+location: # Meetup Location
+    name: The Technology Cooperative
+    address: 127 W Jackson Ave \#103 Knoxville, TN 37902 
+    latitude: 35.9698275
+    longitude: -83.9193424
+
+slack_channel: python

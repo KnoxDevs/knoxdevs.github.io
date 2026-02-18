@@ -1,0 +1,19 @@
+name: Knox Makers #Name of organization
+image: knox_makers.webp
+
+description: >
+    Knox Makers is a place for the Knoxville area's engineers, artists, hobbyists, innovators,
+    educators and entrepreneurs to work and play. KM is a technology and art collective
+    dedicated to the promotion of creativity enabled and informed by science.
+
+links: #Online links
+    website: https://knoxmakers.org 
+    github: 
+    twitter: 
+    facebook: 
+
+location: # Organization Location
+    name: KnoxMakers
+    address: 116 Childress St SW Knoxville, TN 37920
+    latitude:
+    longitude:

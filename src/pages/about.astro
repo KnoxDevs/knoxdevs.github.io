@@ -1,0 +1,111 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+const allOrganizers = await getCollection('organizers');
+const organizers = allOrganizers
+  .sort((a, b) => {
+    const lastA = a.data.name.split(' ').pop() ?? '';
+    const lastB = b.data.name.split(' ').pop() ?? '';
+    return lastA.localeCompare(lastB);
+  });
+
+function buildLinks(links: typeof organizers[0]['data']['links']) {
+  if (!links) return [];
+  const result = [];
+  if (links.website) result.push({ href: links.website.startsWith('http') ? links.website : `https://${links.website}`, label: 'Website', title: 'Website', icon: '' });
+  if (links.github) result.push({ href: `https://github.com/${links.github}`, label: 'GitHub', title: 'GitHub', icon: '' });
+  if (links.twitter) result.push({ href: `https://twitter.com/${links.twitter}`, label: 'Twitter', title: 'Twitter', icon: '' });
+  return result;
+}
+
+function groupLabel(group: string | string[] | null | undefined): string | null {
+  if (!group) return null;
+  if (Array.isArray(group)) return group.join(', ');
+  return group;
+}
+---
+
+<Layout title="About" description="Learn about KnoxDevs, our mission, our Code of Conduct, and the organizers who make Knoxville's developer community happen.">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 flex flex-col gap-16">
+
+    <!-- Mission -->
+    <section>
+      <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">About KnoxDevs</h1>
+      <div class="prose prose-slate max-w-2xl">
+        <p class="text-slate-600 leading-relaxed text-lg">
+          KnoxDevs is a registered non-profit 501(c)(3) whose sole mission is to foster a healthy
+          software developer community in Knoxville, TN. We support local developer groups, host
+          community events, and provide infrastructure to help people connect and grow together.
+        </p>
+      </div>
+    </section>
+
+    <!-- Organizers -->
+    <section>
+      <h2 class="text-2xl font-bold text-slate-900 mb-2">Organizers</h2>
+      <p class="text-slate-600 mb-8 max-w-2xl leading-relaxed">
+        KnoxDevs is made possible by volunteers who organize local groups and events. Say hello if you see them around!
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {organizers.map((org) => (
+          <Card
+            name={org.data.name}
+            description={org.data.description ?? ''}
+            image={org.data.image}
+            imageDir="organizers"
+            links={buildLinks(org.data.links)}
+            meta={groupLabel(org.data.group)}
+            round={true}
+          />
+        ))}
+      </div>
+    </section>
+
+    <!-- Code of Conduct -->
+    <section id="code-of-conduct">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Code of Conduct</h2>
+      <div class="bg-slate-50 rounded-2xl border border-slate-200 p-8 max-w-3xl">
+        <div class="prose prose-slate">
+          <h3>Our Pledge</h3>
+          <p>
+            KnoxDevs is dedicated to providing an outstanding experience, to increase learning
+            opportunities for all our members, regardless of age, body size, disability, ethnicity,
+            gender identity and expression, level of experience, nationality, personal appearance,
+            race, religion, sexual identity, or sexual orientation.
+          </p>
+          <p>
+            We do not tolerate harassment by members or of members in any form. Please treat both
+            your fellow members and non-members with respect. Harassment is not appropriate for any
+            venue. Group members violating these rules may be sanctioned or expelled from the group,
+            at the discretion of the group organizers.
+          </p>
+          <p>
+            KnoxDevs organizers and volunteers will immediately escalate issues around safety,
+            violence, or similar situations to the Knoxville Police Department.
+          </p>
+
+          <h3>Hiring</h3>
+          <p>
+            KnoxDevs is not a marketplace. You may not solicit members who you do not personally
+            know in direct messages for potential contract/hiring purposes. We have a <code>#hiring</code> channel
+            for the explicit purpose to help people <em>in the Knoxville, TN region</em> find local people
+            to hire and for local people to get hired. Companies outside the Knoxville MSA may not
+            post in <code>#hiring</code> unless the position is remote and the company already employs
+            Knoxville-based members.
+          </p>
+
+          <h3>Incident Resolution</h3>
+          <p>
+            Treat others as you would like to be treated. Simple disagreements should be resolved
+            between the individuals concerned. Harassment or more serious issues should be escalated
+            to a KnoxDevs organizer, who will immediately contact a KnoxDevs Board member responsible
+            for assisting in resolution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</Layout>

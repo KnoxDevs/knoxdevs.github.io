@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SlackModal from '../components/SlackModal.astro';
+---
+
+<Layout title="KnoxDevs">
+  <!-- Hero -->
+  <section class="bg-slate-900 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-24 sm:py-32 flex flex-col items-start gap-6">
+      <div class="flex items-center gap-3">
+        <img src="/images/site/knoxdevs.svg" alt="" class="h-12 w-12" />
+        <span class="text-slate-400 text-sm font-medium uppercase tracking-widest">Knoxville, TN</span>
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-bold tracking-tight max-w-2xl leading-tight">
+        Knoxville's developer community
+      </h1>
+      <p class="text-slate-300 text-lg sm:text-xl max-w-xl leading-relaxed">
+        KnoxDevs is a registered non-profit 501(c)(3) whose sole mission is to foster a healthy
+        software developer community in Knoxville, TN.
+      </p>
+      <div class="flex flex-wrap gap-4 mt-2">
+        <SlackModal />
+        <a
+          href="/groups/"
+          class="inline-flex items-center gap-2 px-6 py-3 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-800 transition-colors"
+        >
+          View Groups
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we do -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+    <div class="grid sm:grid-cols-3 gap-8">
+      <div class="flex flex-col gap-2">
+        <div class="text-brand text-2xl font-bold">20+</div>
+        <h3 class="font-semibold text-slate-900">Active Groups</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          From Python to .NET, UX to game design — there's a group for every developer in Knoxville.
+        </p>
+      </div>
+      <div class="flex flex-col gap-2">
+        <div class="text-brand text-2xl font-bold">Quarterly</div>
+        <h3 class="font-semibold text-slate-900">KnoxDevs Events</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          We host quarterly meetups bringing together developers from across the local community.
+        </p>
+      </div>
+      <div class="flex flex-col gap-2">
+        <div class="text-brand text-2xl font-bold">Free</div>
+        <h3 class="font-semibold text-slate-900">To Join</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Membership is always free. Come to a meetup, join Slack, or get involved as an organizer.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events calendar -->
+  <section class="bg-slate-50 border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Upcoming Events</h2>
+      <div class="rounded-xl overflow-hidden border border-slate-200 bg-white">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?showTitle=0&showNav=1&showPrint=0&showCalendars=0&showTz=0&height=500&wkst=1&bgcolor=%23ffffff&src=knoxdevs.com_qtbron4cnhfvur8n0f5g80oo18%40group.calendar.google.com&color=%230180ab&ctz=America%2FNew_York"
+          style="border: 0"
+          width="100%"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+          title="KnoxDevs Events Calendar"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</Layout>

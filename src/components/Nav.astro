@@ -1,0 +1,77 @@
+---
+const navLinks = [
+  { label: 'About', href: '/about/' },
+  { label: 'Groups', href: '/groups/' },
+  { label: 'Resources', href: '/resources/' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 bg-white border-b border-slate-200">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+    <a href="/" class="flex items-center gap-2 font-bold text-lg text-slate-900 hover:text-brand transition-colors">
+      <img src="/images/site/knoxdevs.svg" alt="" class="h-8 w-8" />
+      KnoxDevs
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="hidden sm:flex items-center gap-1">
+      {navLinks.map(({ label, href }) => (
+        <li>
+          <a
+            href={href}
+            class={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+              currentPath.startsWith(href)
+                ? 'bg-brand-light text-brand font-semibold'
+                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+            }`}
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Mobile menu button -->
+    <button
+      id="menu-toggle"
+      class="sm:hidden p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden sm:hidden border-t border-slate-100 bg-white">
+    <ul class="max-w-6xl mx-auto px-4 py-2 flex flex-col gap-1">
+      {navLinks.map(({ label, href }) => (
+        <li>
+          <a
+            href={href}
+            class={`block px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+              currentPath.startsWith(href)
+                ? 'bg-brand-light text-brand font-semibold'
+                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+            }`}
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(!open));
+  });
+</script>

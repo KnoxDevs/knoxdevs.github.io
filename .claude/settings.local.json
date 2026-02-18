@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --version:*)",
+      "Bash(npm:*)",
+      "Bash(python migrate.py:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(dir:*)",
+      "Bash(git -C \"C:/Users/live/dev/knoxdevs.github.io\" ls-files favicon.ico favicon-16x16.png favicon-32x32.png apple-touch-icon.png android-chrome-192x192.png android-chrome-512x512.png mstile-150x150.png safari-pinned-tab.svg site.webmanifest browserconfig.xml CNAME)",
+      "Bash(git -C \"C:/Users/live/dev/knoxdevs.github.io\" rm favicon.ico favicon-16x16.png favicon-32x32.png apple-touch-icon.png android-chrome-192x192.png android-chrome-512x512.png mstile-150x150.png safari-pinned-tab.svg site.webmanifest browserconfig.xml CNAME)",
+      "Bash(git -C \"C:/Users/live/dev/knoxdevs.github.io\" status)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}

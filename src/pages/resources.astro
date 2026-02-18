@@ -1,0 +1,89 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+const [allConferences, allOrganizations, allSpaces] = await Promise.all([
+  getCollection('conferences'),
+  getCollection('organizations'),
+  getCollection('spaces'),
+]);
+
+const conferences = allConferences.sort((a, b) => a.data.name.localeCompare(b.data.name));
+const organizations = allOrganizations.sort((a, b) => a.data.name.localeCompare(b.data.name));
+const spaces = allSpaces.sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+function buildLinks(links: { website?: string | null; twitter?: string | null; facebook?: string | null; github?: string | null } | null | undefined) {
+  if (!links) return [];
+  const result = [];
+  if (links.website) result.push({ href: links.website.startsWith('http') ? links.website : `https://${links.website}`, label: 'Website', title: 'Website', icon: '' });
+  if (links.twitter) result.push({ href: `https://twitter.com/${links.twitter}`, label: 'Twitter', title: 'Twitter', icon: '' });
+  if (links.facebook) result.push({ href: links.facebook, label: 'Facebook', title: 'Facebook', icon: '' });
+  if (links.github) result.push({ href: `https://github.com/${links.github}`, label: 'GitHub', title: 'GitHub', icon: '' });
+  return result;
+}
+---
+
+<Layout title="Local Resources" description="Organizations, conferences, coworking spaces, and other resources for Knoxville developers.">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 flex flex-col gap-14">
+
+    <div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Local Resources</h1>
+      <p class="text-slate-600 max-w-2xl leading-relaxed">
+        Organizations, conferences, and spaces that support and serve Knoxville's developer community.
+      </p>
+    </div>
+
+    <!-- Conferences -->
+    <section>
+      <h2 class="text-xl font-bold text-slate-900 mb-6">Conferences</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {conferences.map((conf) => (
+          <Card
+            name={conf.data.name}
+            description={conf.data.description}
+            image={conf.data.image}
+            imageDir="conferences"
+            links={buildLinks(conf.data.links)}
+            meta={conf.data.location?.city_state ?? conf.data.location?.name ?? undefined}
+          />
+        ))}
+      </div>
+    </section>
+
+    <!-- Organizations -->
+    <section>
+      <h2 class="text-xl font-bold text-slate-900 mb-6">Organizations</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {organizations.map((org) => (
+          <Card
+            name={org.data.name}
+            description={org.data.description}
+            image={org.data.image}
+            imageDir="organizations"
+            links={buildLinks(org.data.links)}
+            meta={org.data.location?.address ?? undefined}
+          />
+        ))}
+      </div>
+    </section>
+
+    <!-- Spaces -->
+    <section>
+      <h2 class="text-xl font-bold text-slate-900 mb-6">Coworking &amp; Event Spaces</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {spaces.map((space) => (
+          <Card
+            name={space.data.name}
+            description={space.data.description}
+            image={space.data.image}
+            imageDir="spaces"
+            links={buildLinks(space.data.links)}
+            meta={space.data.location?.address ?? undefined}
+          />
+        ))}
+      </div>
+    </section>
+
+  </div>
+</Layout>

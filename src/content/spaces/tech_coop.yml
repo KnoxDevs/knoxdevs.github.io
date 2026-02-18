@@ -1,0 +1,18 @@
+name: Technology Cooperative #Name of organization
+image: technology_cooperative.png
+
+type: co-working, event
+
+description: >
+    The Technology Cooperative was founded to create a technology-focused community that will provide computer-related technology access and awareness. It also provides co-working space most weekdays until 6pm.
+
+links:
+    website: http://techco.org/co-working-space/
+    github:
+    twitter: 
+    facebook:
+
+location: # Company Location
+    address: 127 W Jackson Ave \#103 Knoxville, TN 37902 
+    latitude: 35.9698275
+    longitude: -83.9193424

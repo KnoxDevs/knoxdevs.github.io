@@ -1,0 +1,109 @@
+---
+const coc = `
+### Our Pledge
+KnoxDevs is dedicated to providing an outstanding experience, to increase learning opportunities for all our members, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, sexual identity, or sexual orientation.
+
+We do not tolerate harassment by members or of members in any form, and we would like to take this opportunity to remind all members that KnoxDevs was founded on: passionate, but respectful dialog between our members, for our members. Please treat both your fellow members and non-members with respect!
+
+Harassment is not appropriate for any venue. Group members violating these rules may be sanctioned or expelled from the group, at the discretion of the group organizers.
+
+Members must remember that KnoxDevs organizers and volunteers are not trained conflict resolution specialists, nor are they security or law enforcement. KnoxDevs organizers and volunteers will immediately escalate issues around safety, violence, or similar situations to the Knoxville Police Department.
+
+### Hiring
+KnoxDevs is not a marketplace. You may not solicit members who you do not personally know in direct messages ("DMs") for potential contract/hiring purposes. We have a \`hiring\` channel for the explicit purpose to help people *in the Knoxville, TN region* find local people to hire and for local people to get hired.
+
+### Incident Resolution
+Members should follow the golden rule: "One should treat others as one would like others to treat oneself." Treat others, both members and non-members, with respect. Simple disagreements should be resolved between the individuals concerned. Harassment or more serious issues should be escalated to a KnoxDevs organizer.
+`;
+---
+
+<!-- Trigger button -->
+<button
+  id="slack-open"
+  class="inline-flex items-center gap-2 px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-colors shadow-sm"
+>
+  Join us on Slack
+</button>
+
+<!-- Modal backdrop -->
+<div
+  id="slack-modal"
+  class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-title"
+>
+  <div class="bg-white rounded-2xl shadow-xl max-w-lg w-full max-h-[85vh] flex flex-col">
+    <div class="flex items-center justify-between p-6 border-b border-slate-200">
+      <h2 id="modal-title" class="text-lg font-semibold text-slate-900">Before you join</h2>
+      <button
+        id="slack-close"
+        class="p-1.5 rounded-md text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+        aria-label="Close"
+      >
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="p-6 overflow-y-auto flex-1">
+      <p class="text-sm text-slate-600 mb-4">
+        By joining our Slack workspace, you agree to abide by our Code of Conduct:
+      </p>
+      <div class="prose prose-sm prose-slate max-w-none text-slate-700 space-y-3" id="coc-content"></div>
+    </div>
+
+    <div class="p-6 border-t border-slate-200">
+      <a
+        href="https://forms.gle/GSv5NhvvVmQsj4nAA"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block w-full text-center px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-colors"
+      >
+        I agree — Join Slack
+      </a>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ coc }}>
+  // Minimal markdown → HTML renderer for the CoC
+  function renderMarkdown(text) {
+    return text
+      .trim()
+      .split('\n\n')
+      .map(block => {
+        if (block.startsWith('### ')) {
+          return `<h3 class="font-semibold text-slate-900 mt-4 mb-1">${block.slice(4)}</h3>`;
+        }
+        return `<p>${block
+          .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+          .replace(/`([^`]+)`/g, '<code class="bg-slate-100 px-1 rounded text-xs">$1</code>')
+          .replace(/\n/g, ' ')}</p>`;
+      })
+      .join('');
+  }
+
+  document.getElementById('coc-content').innerHTML = renderMarkdown(coc);
+
+  const modal = document.getElementById('slack-modal');
+  const open = document.getElementById('slack-open');
+  const close = document.getElementById('slack-close');
+
+  function showModal() {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+  function hideModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  open?.addEventListener('click', showModal);
+  close?.addEventListener('click', hideModal);
+  modal?.addEventListener('click', (e) => { if (e.target === modal) hideModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hideModal(); });
+</script>

@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+const allGroups = await getCollection('groups');
+const groups = allGroups
+  .sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+function buildLinks(links: typeof groups[0]['data']['links']) {
+  if (!links) return [];
+  const result = [];
+  if (links.website) result.push({ href: links.website.startsWith('http') ? links.website : `https://${links.website}`, label: 'Website', title: 'Website', icon: '' });
+  if (links.meetup) result.push({ href: `https://www.meetup.com/${links.meetup}`, label: 'Meetup', title: 'Meetup', icon: '' });
+  if (links.github) result.push({ href: `https://github.com/${links.github}`, label: 'GitHub', title: 'GitHub', icon: '' });
+  if (links.twitter) result.push({ href: `https://twitter.com/${links.twitter}`, label: 'Twitter', title: 'Twitter', icon: '' });
+  if (links.slack) result.push({ href: links.slack, label: 'Slack', title: 'Slack', icon: '' });
+  return result;
+}
+---
+
+<Layout title="Developer Groups" description="Knoxville's developer meetup groups, spanning Python, JavaScript, .NET, Java, UX, data, security, and more.">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <div class="mb-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Developer Groups</h1>
+      <p class="text-slate-600 max-w-2xl leading-relaxed">
+        Knoxville has a thriving ecosystem of developer meetup groups. Whether you're into Python,
+        JavaScript, cloud, security, or just want to connect with fellow developers — there's
+        a group for you.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {groups.map((group) => (
+        <Card
+          name={group.data.name}
+          description={group.data.description}
+          image={group.data.image}
+          imageDir="groups"
+          links={buildLinks(group.data.links)}
+          meta={group.data.location?.name ?? group.data.location?.city_state ?? undefined}
+        />
+      ))}
+    </div>
+
+    <p class="mt-12 text-sm text-slate-500">
+      Run a developer group in Knoxville?{' '}
+      <a href="https://github.com/knoxdevs/knoxdevs.github.io" class="text-brand underline underline-offset-2 hover:text-brand-dark" target="_blank" rel="noopener noreferrer">
+        Submit a pull request
+      </a>{' '}
+      to get listed.
+    </p>
+  </div>
+</Layout>
